@@ -35,8 +35,8 @@
   </head>
   <body>
     <header class="container-fluid" >
-        <div id="topnav" class ="row pt-lg-2 d-none d-lg-flex  nav-bg-color">
-            <div class="col-4 col-lg-4">
+        <div id="topnav" class ="row pt-lg-2 d-none d-lg-flex nav-bg-color">
+            <div class="col-4 col-lg-4  py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group">
                         <input class="form-control border border-black" type="text" name="q" placeholder="Search Our Store">
@@ -52,9 +52,9 @@
                 </form>
             </div>
 
-            <div class="col-12 col-lg-4  text-center ">
+            <div class="col-12 col-lg-4  text-center my-auto py-1 py-lg-0 ">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                     <h1 class="text-white"><i class="fas fa-paw text-white"></i> Pawfect Pets <i class="fas fa-paw text-white"></i></h1>
+                     <h1 class="text-white logo-font"><i class="fas fa-paw text-white"></i> Pawfect Pets <i class="fas fa-paw text-white"></i></h1>
                 </a>
             </div>
             <div class="col-12 col-lg-4">
@@ -62,28 +62,28 @@
                     <li class="list-inline-item dropdown">     
                         <a class=" nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user text-white"></i></div>
-                                <p class="my-o text-white">My Account</p>
+                                <div><i class="fas fa-user text-white nav-font"></i></div>
+                                <p class="my-o text-white nav-font ">My Account</p>
                             </div>      
                         </a>            
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Product Management</a>
+                                    <a href="" class="dropdown-item dropdown-font">Product Management</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="" class="dropdown-item dropdown-font">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item dropdown-font">Logout</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item dropdown-font">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item dropdown-font">Login</a>
                             {% endif %}
                         </div> 
                     </li>
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg text-white"></i></div>
-                                <p class="my-0 text-white">
+                                <div><i class="fas fa-shopping-bag fa-lg text-white nav-font"></i></div>
+                                <p class="my-0 text-white nav-font">
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}
@@ -94,6 +94,15 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="row nav-bg-color">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
             </div>
         </div>
     </header>

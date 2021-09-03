@@ -44,3 +44,24 @@ ul {
       .nav-bg-color {
           background-color: #88daf3;
       }
+
+.logo-font {
+    font-family: DM Serif Text;
+    text-shadow: 2px 2px #000;
+}
+
+.nav-font {
+    font-family: Quicksand;
+    text-shadow: 2px 2px #000;
+    font-size: 1.5em;
+}
+
+.index-font {
+    Font-family: Quicksand;
+    Font-size: 4em;
+}
+
+.dropdown-font {
+    font-family: Quicksand;
+    font-weight: 700;
+}
