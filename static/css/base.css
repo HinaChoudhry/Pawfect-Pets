@@ -8,8 +8,11 @@ html {
 body {
     background: url('/media/home_bg.jpg') no-repeat center center fixed;
     background-size: contain;
-    height: auto;
-    width: 100vw;
+    width: auto;
+}
+
+ul {
+    margin-bottom: 0px;
 }
 
 /* from Bulma */
