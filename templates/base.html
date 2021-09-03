@@ -36,9 +36,9 @@
   <body>
     <header class="container-fluid" >
         <div id="topnav" class ="row pt-lg-2 d-none d-lg-flex nav-bg-color">
-            <div class="col-4 col-lg-4  py-1 py-lg-0">
+            <div class="col-4 py-1 py-lg-0">
                 <form method="GET" action="">
-                    <div class="input-group">
+                    <div class="input-group w-100">
                         <input class="form-control border border-black" type="text" name="q" placeholder="Search Our Store">
                         <div class="input-group-append">
                             <button class ="form-control btn btn-light" type="submit">
@@ -95,15 +95,16 @@
                     </li>
                 </ul>
             </div>
-            <div class="row nav-bg-color">
-                <nav class="navbar navbar-expand-lg navbar-light w-100">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    {% include 'includes/mobile-top-header.html' %}
-                    {% include 'includes/main-nav.html' %}
-                </nav>
-            </div>
+           
+        </div>
+        <div class="row nav-bg-color">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
         </div>
     </header>
     {% if messages %}

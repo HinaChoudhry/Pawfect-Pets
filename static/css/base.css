@@ -56,6 +56,13 @@ ul {
     font-size: 1.5em;
 }
 
+.subtitle-font {
+    font-family: Quicksand;
+    color: #000;
+    font-size: 2em;
+    font-weight: 700;
+}
+
 .index-font {
     Font-family: Quicksand;
     Font-size: 4em;
