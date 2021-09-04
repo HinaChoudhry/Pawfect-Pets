@@ -69,11 +69,14 @@ ul {
 
 .subtitle-font {
     font-family: Quicksand;
-    color: #000;
+    color: #fff;
     font-size: 2em;
     font-weight: 700;
 }
 
+.subtitle-font:hover {
+    color: #000;
+}
 .index-font {
     Font-family: Quicksand;
     Font-size: 4rem;
@@ -112,4 +115,14 @@ ul {
     opacity: 0.7;
     font-family: Quicksand;
     font-weight: 700;
+  }
+
+  .header-container {
+      margin-bottom: 5%;
+  }
+
+  .dropdown-font {
+      font-family: Quicksand;
+      font-size: 1.2rem;
+      font-weight: 500;
   }
