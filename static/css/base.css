@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+
 html {
     height: 100%;
 }
 
-body {
-    background: url('/media/home_bg.jpg') no-repeat center center fixed;
+.hero-img {
+    background: url("/media/home_bg.jpg");
+    background-repeat: no-repeat;
     background-size: contain;
+    height: 276px;
     width: auto;
+    background-position: center;
+       
+}
+
+.margin-index { 
+    margin-bottom: 20%;
 }
 
 ul {
@@ -40,8 +49,10 @@ ul {
           left: 0;
           z-index: 1030;
       }
+    }
 
-      .nav-bg-color {
+
+ .nav-bg-color {
           background-color: #88daf3;
       }
 
@@ -53,7 +64,7 @@ ul {
 .nav-font {
     font-family: Quicksand;
     text-shadow: 2px 2px #000;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .subtitle-font {
@@ -65,10 +76,26 @@ ul {
 
 .index-font {
     Font-family: Quicksand;
-    Font-size: 4em;
+    Font-size: 4rem;
 }
 
 .dropdown-font {
     font-family: Quicksand;
     font-weight: 700;
+    font-size: 1.5vw;
+}
+
+.navbar-padding {
+    padding: 0rem;
+}
+
+.list-font {
+    font-family: Quicksand;
+    font-size: 1.2vw;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 1;
+    background-color: #88daf3;
 }
