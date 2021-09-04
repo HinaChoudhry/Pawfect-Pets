@@ -112,10 +112,14 @@ ul {
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 1;
     font-family: Quicksand;
     font-weight: 700;
   }
+
+.btn:hover {
+    opacity: 0.7;
+}
 
   .header-container {
       margin-bottom: 5%;
@@ -126,3 +130,20 @@ ul {
       font-size: 1.2rem;
       font-weight: 500;
   }
+
+  .footer-style {
+      background-color: #88daf3;
+      font-family: Quicksand;
+      padding-top: 20px;
+  }
+
+  .fa-footer {
+      color: #000;
+      justify-content: center;
+  }
+
+  .fa-footer:hover {
+      color:#000;
+      opacity: 0.7;
+  }
+  
