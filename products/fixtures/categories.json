@@ -1,0 +1,26 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "Dogs",
+        "friendly_name": "Dogs"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "Cats",
+        "friendly_name": "Cats"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "small_animals",
+        "friendly_name": "Small Animals"
+      }
+    }
+]

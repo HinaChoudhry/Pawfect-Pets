@@ -1,0 +1,393 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000001",
+        "name": "Squeaky & Foraging Instinct Dog Toy",
+        "description": "The interactive dog toy can be coiled into the shape of a snail, increasing the difficulty of sniffing. Unfold the toy into a stick shape, with hidden holes for food, and hide some food in the snail shell so that the dog can get food through sniffing and physical exercise",
+        "price": 13.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/7701DVz.png",
+        "image": "squeaky_dog_toy.png"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000002",
+        "name": "Octopus Chew Toy For Dogs",
+        "description": "Adding Daily Entertainment to your pets, Relieve the depression,boredom and anxiety when they are alone, it can also reduce the chance of your pet to bite sofa,shoes,etc which can keep your home clean and tidy.",
+        "price": 8.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/SxWtV4u.png",
+        "image": "octopus_chew_toy.png"
+      }
+    },
+{
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000003",
+        "name": "Puppy Dog Toy Plushie",
+        "description": "Little Petface Freddi Cord Dog Toy with squeaker for added excitement, light and soft for playful games, the perfect companion for playful pups. These cord character soft toys are great to keep puppy entertained and company when snuggled up, developing play skills and keeping their little mouths busy and satisfied",
+        "price": 5.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/PaIeQLy.png",
+        "image": "puppy_dog_toy.png"
+      }
+    },
+
+{
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000004",
+        "name": "Monkey, Elephant & Lion Plush with Rope For Dogs",
+        "description": "This pet toys with squeaky are perfect for stimulating your dog's interest and keep dogs busy and happy or simply enjoy the kind of quality play that improves your bond with your pet friend. In addition, dog toys with build-in squeakers so that dogs will never get bored with these floppy toys",
+        "price": 12.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/4nOviKO.png",
+        "image": "monkey_elephant_lion.png"
+      }
+    },
+   {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000005",
+        "name": "Soft Skunk Dog Toy",
+        "description": "Soft and safe on gums and teeth, ideal as a comforter or for a game of fetch. Perfect for smaller dog breeds. Prevents unwanted chewing and encourages natural play. Soft and safe on gums and teeth",
+        "price": 6.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/6nmq9Dp.png",
+        "image": "skunk_toy.png"
+      }
+    },
+ {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000006",
+        "name": "Hide A Squirrel Puzzle Toy For Dogs",
+        "description": "The Hide A Squirrel dog puzzle is an easy way to get your furry friends engaged for hours of fun. Just fill the tree trunk with 6 stuffed squeaky squirrels, toss it, and let your dog's natural hunting instincts kick in",
+        "price": 17.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/1nKRNQq.png",
+        "image": "squirrel_toy.png"
+      }
+    },
+{
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000007",
+        "name": "Cotton, Squeaky Dog Toy",
+        "description": "The cotton is soft and elastic, not to hurt your dog's gum and teeth. The surface of the soft cotton toy is imitating the uneven shape of corn kernels, which helps to effectively clean the teeth. Increasing exercise by playing with toys to keep them healthy. The squeaker dog toy is built to make a sound when squeezed. It will grab the attention of pets, keep them having fun and eliminate hours of boredom. Helping puppies relieve anxiety and loneliness.",
+        "price": 5.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/BSDATig.png",
+        "image": "elephant_toy.png"
+      }
+    },
+{
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000008",
+        "name": "Anxiety & Boredom Relieving Cockatoo For Dogs",
+        "description": "These plush dog toys are made of soft plush, which is smelless,non-toxic ,safe and comfortable. Waterproof plush fabric can effectively prevent the dog's saliva from penetrating quickly. Because it can be washed, even if the toy is dirty, it is easy to clean.",
+        "price": 13.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/xu0rJQO.png",
+        "image": "cockatoo.png"
+      }
+    },
+{
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000009",
+        "name": "Dog Rope & Chew Toy Collection",
+        "description": "Strong and durable rope toys for long-lasting fun with your pet. Curb chewing behaviour and keep your dog entertained for hours on end.",
+        "price": 12.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/kL84EWV.png",
+        "image": "rope_toys.png"
+      }
+    },
+{
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000010",
+        "name": "Dog Treat Dispenser Ball",
+        "description": " Putting a porting of pet food in this toy, they will have no choice but eat what is dispensed. They needs more work and physical activity to get food by themselves. Their hard work will be rewarded with food coming out of the feeder. This toy can slow down pet feeding and prevent pet from digestion, bloating and obesity",
+        "price": 9.99,
+        "category": 1,
+        "image_url": "https://i.imgur.com/uqaNkWK.png",
+        "image": "treat_dispenser.png"
+      }
+    },
+{
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000011",
+        "name": "Cat Feather Wand",
+        "description": "This cat toys set includes 8 pcs feather teaser refills, made of natural feathers, different styles including feathers,worms,and fish. Most of the feathers have bells on it, which can increase cats' interest",
+        "price": 9.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/Xp6QNBr.png",
+        "image": "cat_feather_wand.png"
+      }
+    },
+{
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000012",
+        "name": "21 pcs Cat Toys and Tunnel",
+        "description": "This assortment provides hours of exercise & self-amusement. It keeps your cat busy when you’re away. Burning off extra energy from your kitties,helping keep cats always happy and healthy.",
+        "price": 9.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/id3sxeS.png",
+        "image": "cat_tunnel.png"
+      }
+    },
+{
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000013",
+        "name": "Floppy Fish Cat Toy",
+        "description": "Built-in touch sensor. Turn on the fish cat toy switch, when your cat slaps it, it will automatically swing and make a sound, which will attract your cat to bite and kick. If your cat stops touching the floppy fish cat toy, it will stop swinging to save electricity effectively.",
+        "price": 9.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/ovSdhbd.png",
+        "image": "floppy_fish.png"
+      }
+    },
+{
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000014",
+        "name": "Interactive, Rotating Ball Cat Toy",
+        "description": "This cat toy is very easy to use, press the button and the ball will automatically start a 360 degrees self scroll and light up the red LED light to attract the cat's attention and let the cat chase the ball around indoors to have fun and exercise. The ball automatically changes direction when hitting an obstacle.",
+        "price": 14.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/Hno3can.png",
+        "image": "interactive_cat_ball.png"
+      }
+    },
+{
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000015",
+        "name": "Interactive, Running Mouse Toy For Cats",
+        "description": "A cunning mouse plays hide and seek to captivate your pet's attention, simulating a real movement. This interesting way satisfies the needs of hunting instincts, physical exercise and stress reduction.",
+        "price": 21.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/UwuzqAC.png",
+        "image": "running_mouse.png"
+      }
+    },
+{
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000016",
+        "name": "Cat Laser Pen",
+        "description": "These cat chaser toys undergo IEC and TÜV rigorous safety testing, which means harmless for humans and animals, but please DO NOT illuminate the human or pets' eyes. You can just sit on the sofa and interact with your cat by using this teaser wand without running.",
+        "price": 6.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/mVG9AqC.png",
+        "image": "cat_laser_toy.png"
+      }
+    },
+{
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000017",
+        "name": "Whirling Feather Cat Toy",
+        "description": "Satisfy your cat's need for exercise. This is an interactive cat toy. The hunt for the irregularly moving, fluttering feather toy offers physical and mental entertainment",
+        "price": 17.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/sJgn7Cz.png",
+        "image": "whirling_feather_toy.png"
+      }
+    },
+{
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000018",
+        "name": "Catnip & Cat Grass",
+        "description": "Grass for cats is the most natural source of fiber. It stimulates digestion and also reduces the formation of hairballs. Unlike houseplants which are often poisonous, catnip is very healthy and perfectly suitable for consumption.",
+        "price": 9.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/haAe35e.png",
+        "image": "catnip.png"
+      }
+    },
+{
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000019",
+        "name": "Cat Feather Sticks",
+        "description": "This cat wand help your cats keep active and do more exercise, increasing kitten’s interest and stimulate cat’s sense and make teasing a cat is no longer a manual job for you. This interactive toys engage your cats with you and it builds trust and companionship.",
+        "price": 11.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/12DP233.png",
+        "image": "cat_wands.png"
+      }
+    },
+{
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000020",
+        "name": "Cat Climbing Tree",
+        "description": "Due to post box designs, this scratching post has a very specific look. With the white and gray cylindrical scratching post and the S-shaped scratching ladder, it's as simple as a living, open post box. This mailbox scratching post brings a lot of vitality to your home.",
+        "price": 11.99,
+        "category": 2,
+        "image_url": "https://i.imgur.com/UjYhxjA.png",
+        "image": "cat_tree.png"
+      }
+    },
+{
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000021",
+        "name": "Hamster Playset",
+        "description": "Our hamster seesaw, bridge and swing combination helps you to design a playground for your pet to play and exercise. You can match the seesaw with the bridge, which increases the fun of playing for small pets.",
+        "price": 4.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/MDV2a8z.png",
+        "image": "hamster_playset.png"
+      }
+    },
+{
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000022",
+        "name": "Chew Toy For Rabbits & Small Pets",
+        "description": "The chew toys kit includes apple branch natural timothy hay sticks, grass ball, carrot, pine cones, 3 * fun balls, fun treats to chew, climb and rest. Relieves boredom and increases activity level",
+        "price": 11.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/3396dDF.png",
+        "image": "chew_toy.png"
+      }
+    },
+{
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000023",
+        "name": "11 Pcs Fun Balls for Small Pets",
+        "description": "Due to the suitable size, our cute critter can easily get their teeth around it and toss it to entertain themselves to enjoy pastime, bounce, playing fetch and nibbling, help prevent boredom.",
+        "price": 9.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/8HoiOa1.png",
+        "image": "fun_balls.png"
+      }
+    },
+{
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000024",
+        "name": "Hand-woven Grass Mats For Small Pets",
+        "description": "you can use it as a bed or use as a glider toy or a foot toy; Hide small treats in between the layers and your pet will love spending hours exploring, foraging and chewing",
+        "price": 9.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/AC8hHcG.png",
+        "image": "grass_mat.png"
+      }
+    },
+{
+      "pk": 25,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000025",
+        "name": "Small Animal Snack Ball",
+        "description": "Snacks fall out from the rolling motion. Made of plastic, material ideal for training and skills. With adjustable opening to regulate the treat output. Suitable for small animal",
+        "price": 3.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/C2ywKv2.png",
+        "image": "snack_ball.png"
+      }
+    },
+{
+      "pk": 26,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000026",
+        "name": "Small Animal Pinecone Toys",
+        "description": "It will provide excellent opportunities for small rodents to play and exercise, keep them healthy and active, reduce loneliness and the anxiety in the cage, makes them feel more fun in a limited space in novel and interesting ways.",
+        "price": 12.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/Sqi6g8s.png",
+        "image": "pinecone_toys.png"
+      }
+    },
+{
+      "pk": 27,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000027",
+        "name": "Fun Bunny Tree With Carrot Toys",
+        "description": "A fun chew and scratch toy. Made from pet safe materials including seagrass and corn leaf. Ideal for rabbits, guinea pigs, chinchillas and rats. Made with pet safe dyes and non-toxic glue",
+        "price": 21.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/cFQyzbc.png",
+        "image": "bunny_tree.png"
+      }
+    },
+{
+      "pk": 28,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000028",
+        "name": "Wooden Hamster Chew Toy",
+        "description": "This toy ball is made of high quality wooden material, sturdy and durable. All parts are rounded smooth, no burr, avoids hurting your pets.",
+        "price": 11.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/Gjh9cBn.png",
+        "image": "hamster_chew_toy.png"
+      }
+    },
+{
+      "pk": 29,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000029",
+        "name": "Plastic Exercise Wheel",
+        "description": "Solid running surface. Completely safe for Your pet's tail and feet. Providing your pet with more to explore and climb. ",
+        "price": 9.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/19Iwb4x.png",
+        "image": "exercise_wheel.png"
+      }
+    },
+{
+      "pk": 30,
+      "model": "products.product",
+      "fields": {
+        "sku": "0000030",
+        "name": "Colourful Exercise Wheel",
+        "description": "Designed with whisper-silent spin, our hamster running wheel can be free from noise during exercise, giving you and your pet a quiet night. The rainbow colors and the cute shape will attract pets’ attention.",
+        "price": 6.99,
+        "category": 3,
+        "image_url": "https://i.imgur.com/qwUY1am.png",
+        "image": "colourful_wheel.png"
+      }
+    }
+]
