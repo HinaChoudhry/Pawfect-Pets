@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
+                <h1 class="heading-font">Products</h1>
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -27,20 +27,20 @@
                             <div class="card h-100 border-0">
                                 {% if product.image %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid img-border" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid img-border" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <h5 class="mb-0 product-font">{{ product.name }}</h5>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                            <p class="lead mb-0 text-left product-font">£{{ product.price }}</p>
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="#">
