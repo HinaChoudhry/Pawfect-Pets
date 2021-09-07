@@ -48,7 +48,33 @@
                                         <h5 class="my-0 product-font font-weight-bold">£{{ item.product.price }}</h5>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <h5 class="my-0 product-font font-weight-bold">{{ item.quantity }}</h5>
+                                        <form method="POST" class="form update-form" action="">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty img-border rounded-0 btn-sm" 
+                                                            data-item_id="{{  item.item_id }}" id="decrement-qty_{{  item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm qty_input" type="number" 
+                                                    name="quantity" value="1" min="1" max="99" 
+                                                    data-item_id="{{  item.item_id }}" id="id_qty_{{  item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty img-border rounded-0 btn-sm"
+                                                            data-item_id="{{  item.item_id }}" id="increment-qty_{{  item.item_id }}">
+                                                            <span class="icon">
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                        </form>
+                                        <a class="update-link text-info update-link"><small>Update</small></a>
+                                        <a class="remove-item text-danger float-right remove-link" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <h5 class="my-0 product-font font-weight-bold">£{{ item.product.price }}</h5>
@@ -97,4 +123,32 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('size');
+        var url = `/bag/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+
 {% endblock %}

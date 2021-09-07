@@ -183,7 +183,9 @@ ul {
       
   }
 
-  .btt-link {
+  .btt-link,
+  .update-link,
+  .remove-link {
       cursor: pointer;
   }
 
