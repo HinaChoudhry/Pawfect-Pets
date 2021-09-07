@@ -10,12 +10,12 @@
 {% endblock %}
 
 {% block content %}
-    
+    <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h1 class="product-font text-center mb-4"><strong>Shopping Bag</strong></h1>
                 <hr>
             </div>
         </div>
@@ -24,8 +24,66 @@
             <div class="col">
                 {% if bag_items %}
                     <div class="table-responsive rounded">
-                        {{ bag_items }}
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col" class="product-font font-weight-bold">Product Info</th>
+                                    <th scope="col" class="product-font font-weight-bold"></th>
+                                    <th scope="col" class="product-font font-weight-bold">Price</th>
+                                    <th scope="col" class="product-font font-weight-bold">Qty</th>
+                                    <th scope="col" class="product-font font-weight-bold">Subtotal</th>
+                                </tr>
+                            </thead>
 
+                            {% for item in bag_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                    </td>
+                                    <td class="py-3">
+                                        <h5 class="my-0 product-font font-weight-bold"><strong>{{ item.product.name }}</strong></h5>
+                                        <p class="my-0 small product-font font-weight-bold text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <h5 class="my-0 product-font font-weight-bold">£{{ item.product.price }}</h5>
+                                    </td>
+                                    <td class="py-3 w-25">
+                                        <h5 class="my-0 product-font font-weight-bold">{{ item.quantity }}</h5>
+                                    </td>
+                                    <td class="py-3">
+                                        <h5 class="my-0 product-font font-weight-bold">£{{ item.product.price }}</h5>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h5 class="product-font font-weight-bold"><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h5>
+                                    <h5 class="product-font font-weight-bold">Delivery: £{{ delivery|floatformat:2 }}</h5>
+                                    <h3 class="mt-4 product-font font-weight-bold"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h3>
+                                    {% if free_delivery_delta > 0 %}
+                                        <p class="mb-1 text-danger product-font font-weight-bold">
+                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                        </p>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg border border-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase product-font font-weight-bold">Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="btn btn-black rounded-0 btn-lg border border-dark">
+                                        <span class="text-uppercase product-font font-weight-bold">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
