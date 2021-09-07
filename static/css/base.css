@@ -194,3 +194,8 @@ ul {
     bottom: 10px;
     right: 10px;
 }
+
+.banner {
+    background-color: #000;
+    font-family: Quicksand;
+}
