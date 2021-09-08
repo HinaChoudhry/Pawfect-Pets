@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -78,7 +79,7 @@
                                         <a class="remove-item text-danger float-right remove-link" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <h5 class="my-0 product-font font-weight-bold">£{{ item.product.price }}</h5>
+                                        <h5 class="my-0 product-font font-weight-bold">£{{ item.product.price | calc_subtotal:item.quantity }}</h5>
                                     </td>
                                 </tr>
                             {% endfor %}
