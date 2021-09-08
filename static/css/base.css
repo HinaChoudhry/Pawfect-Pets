@@ -201,3 +201,26 @@ ul {
     background-color: #000;
     font-family: Quicksand;
 }
+
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+body{
+    height: calc(100vh - 164px);
+    width: 100%;
+}

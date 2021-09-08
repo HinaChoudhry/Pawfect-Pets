@@ -39,7 +39,7 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                        <img class="img-fluid rounded img-border" src="{{ item.product.image.url }}">
                                     </td>
                                     <td class="py-3">
                                         <h5 class="my-0 product-font font-weight-bold"><strong>{{ item.product.name }}</strong></h5>
@@ -114,13 +114,15 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <div class="text-center">
+                    <p class="lead mb-5 product-font">Your bag is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg  border-dark">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Keep Shopping</span>
+                        <span class="text-uppercase product-font font-weight-bold ">Keep Shopping</span>
                     </a>
+                </div>
                 {% endif %}
             </div>
         </div>
