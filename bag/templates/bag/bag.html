@@ -72,6 +72,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
+                                            </div>
                                         </form>
                                         <a class="update-link text-info update-link"><small>Update</small></a>
                                         <a class="remove-item text-danger float-right remove-link" id="remove_{{ item.item_id }}"><small>Remove</small></a>
@@ -132,7 +133,8 @@
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
+        console.log($(this).prev());
+        let form = $(this).prev('.update-form');
         form.submit();
     })
 
