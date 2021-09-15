@@ -56,9 +56,9 @@
                     <p class="mb-0"> Date: {{ order.date }}</p>
                     {% for item in order.lineitems.all %}
                         <p class=" mb-0"> Ordered:
-                            {{ item.product.name }}{% if item.product_size %} - Size {{ item.product_size|upper }}{% endif %}
+                            {{ item.product.name }}
                         </p>
-                        <p class=" mb-0">Price per item: {{ item.quantity }} @ ${{ item.product.price }} each</p>
+                        <p class=" mb-0">Price per item: {{ item.quantity }} @ £{{ item.product.price }} each</p>
                     {% endfor %}
                     <p class="font-weight-bold mb-0">Payment Details:</p>
                     <p class="mb-0">Total: <strong>£{{ order.order_total }}</strong></p>
