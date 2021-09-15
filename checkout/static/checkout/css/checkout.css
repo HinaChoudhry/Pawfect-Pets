@@ -38,5 +38,10 @@
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid rgba(87, 85, 85, 0.411);
+}
+
+.img-border {
+  border: solid 1px rgba(87, 85, 85, 0.411);
+  border-radius: 10px;
 }

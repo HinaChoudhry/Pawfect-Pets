@@ -17,30 +17,67 @@
 {% endblock %}
 
 {% block content %}
-    
-    <div class="container">
-        <div class="row">
-            <div class="col">
+
+    <div class="container checkout-container">
+        <div class="row product-font">
+            <div class="col text-center">
+                
+                <h1 class=" mb-4 font-weight-bold">Order successfully placed! <i class="fas fa-check"></i></h1>
                 <hr>
-                <h1 class="product-font text-center mb-4"><strong>Thank You</strong></h1>
-                <hr>
-                <p>The order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
+                <div class=" jumbotron checkout-bg-color">
+                    <p class="text-full ">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                    <p class="text-full">Your order number is <strong>{{ order.order_number }}</strong>.</p>                   
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12 col-lg-7"></div>
+     
+        <div class="row product-font">
+         <div class="col-12 col-lg-6 ">
+                <div class=" p-2 img-border text-full">                   
+                    <p class="font-weight-bold mb-0">Shipping Details:</p>
+                     <p class="mb-0">{{ order.full_name }}</p>
+                     <p class="mb-0">{{ order.street_address1 }}</p>
+                    {% if order.street_address2 %}                   
+                        <p class="mb-0">{{ order.street_address1 }}</p>
+                    {% endif %}
+                    {% if order.county %}
+                        <p class="mb-0">{{ order.county }}</p>
+                    {% endif %}
+                    <p class="mb-0">{{ order.postcode }}</p>
+                    <p class="mb-0">{{ order.town_or_city }}</p>
+                    <p class="mb-0">{{ order.country }}</p>
+                </div>
+            </div>               
+
+            <div class="col-12 col-lg-6">
+                <div class="img-border p-2 img-border text-full">                   
+                    <p class="font-weight-bold mb-0">Order Details:</p>
+                    <p class="mb-0"> Date: {{ order.date }}</p>
+                    {% for item in order.lineitems.all %}
+                        <p class=" mb-0"> Ordered:
+                            {{ item.product.name }}{% if item.product_size %} - Size {{ item.product_size|upper }}{% endif %}
+                        </p>
+                        <p class=" mb-0">Price per item: {{ item.quantity }} @ ${{ item.product.price }} each</p>
+                    {% endfor %}
+                    <p class="font-weight-bold mb-0">Payment Details:</p>
+                    <p class="mb-0">Total: <strong>£{{ order.order_total }}</strong></p>
+                    <p class="mb-0">Shipping: <strong>£{{ order.delivery_cost }}</strong></p>
+                    <h5 class="mb-0"><strong>Grand Total: £{{ order.grand_total }}</strong></h5>
+                </div>
+            </div>
         </div>
-        <div class="row">
-			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
-					<span class="icon mr-2">
-						<i class="fas fa-gifts"></i>
-					</span>
-					<span class="text-uppercase">Now check out the latest deals!</span>
-				</a>
-			</div>
-		</div>
+        &nbsp;    
+    
+        <div class="text-center">
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg  border-dark">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase product-font font-weight-bold ">Keep Shopping</span>
+            </a>
+        </div>
     </div>
 {% endblock %}
+
 
