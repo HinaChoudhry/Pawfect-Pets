@@ -1,1 +1,20 @@
 {% extends "base.html" %}
+
+
+{% block content %}
+    <div class="container header-container mb-3 product-font">
+        
+        <div class="row justify-content-center allauth-container">
+            <div class="col-12 col-md-6 text-center">
+                <div class="jumbotron jum-bg-color wrap-allauth">
+                    <div class="allauth-form-inner-content">
+                        {% block inner_content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
