@@ -70,12 +70,21 @@
         &nbsp;    
     
         <div class="text-center">
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btn btn-outline-black rounded-0 btn-lg  border-dark">
+                <span class="icon">
+                    <i class="fas fa-angle-left"></i>
+                </span>
+                <span class="text-uppercase product-font font-weight-bold ">Profile</span>
+            </a>
+            {% else %}
             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg  border-dark">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
                 <span class="text-uppercase product-font font-weight-bold ">Keep Shopping</span>
             </a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
