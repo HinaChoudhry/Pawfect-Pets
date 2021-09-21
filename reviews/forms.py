@@ -19,7 +19,7 @@ class ReviewForm(forms.ModelForm):
         }
 
         # Add placeholders and classes to input fields
-        self.fields['title'].widget.attrs['autofocus'] = True
+        
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'

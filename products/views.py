@@ -3,10 +3,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.utils import timezone
 
 from reviews.forms import ReviewForm
 from .models import Product, Category
 from .forms import ProductForm
+from reviews.models import Review
 
 
 def all_products(request):
@@ -67,10 +69,12 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     form = ReviewForm()
+    reviews = Review.objects.filter(product=product, date__lte=timezone.now()).order_by('-date')
 
     context = {
         'product': product,
-        'form': form
+        'form': form,
+        'reviews': reviews
     }
 
     return render(request, 'products/product_detail.html', context)
