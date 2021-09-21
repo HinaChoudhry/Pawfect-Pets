@@ -2,18 +2,22 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Review
+from .models import Review, Product
 from .forms import ReviewForm
 
 
 # Create your views here.
 @login_required
 def add_review(request, product_id):
-    """ Add a review to the store """
+    """ Add a review to a product """
+    product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
-            review = form.save()
+            review = form.save(commit=False)
+            review.product = product
+            review.user = request.user.userprofile
+            review.save()
             messages.success(request, 'Successfully added review')
             return redirect(reverse('product_detail', args=[product_id]))
         else:
@@ -57,7 +61,7 @@ def edit_review(request, product_id):
 
 @login_required
 def delete_review(request, product_id):
-    """ Delete a product from the store """
+    """ Delete a review from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only superusers can do that')
         return redirect(reverse('home'))
