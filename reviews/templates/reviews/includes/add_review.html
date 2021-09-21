@@ -8,6 +8,48 @@
         </div>
     </div>
 
+    <div class="container product-font">
+        <div class="col-md-12">
+            
+                <div class=" rounded shadow-sm p-4 mb-4">
+                   
+                    <div class=" pt-4 pb-4">
+                        {% if product.reviews.count > 0 %}
+                        {% for review in reviews %}
+                                <div class="row align-items-start review-detail mt-3">
+                                    <div class="col-4">
+                                        <h6 class="mb-1 text-full">{{ review.user }}</h6>
+                                        <p class="text-gray text-full">{{ review.date }}</p>
+                                        
+                                    </div>
+                                    <div class="">
+                                        
+                                        <div class="text-full">
+                                            <p>{{ review.title }}</p>
+                                        </div>
+                                        <div class="text-full">
+                                            <p>{{ review.comment }}</p>
+                                        </div>
+                                        
+                                            <div>
+                                                <button type="button" class="btn btn-full text-full" data-toggle="modal" data-target="#deleteReview-{{ review.id }}"><i class="fas fa-trash-alt"></i></button>
+                                                <a href="{% url 'edit_review' review.id %}"" class="btn btn-clear"><i class="fas fa-edit"></i></a>
+                                            </div>
+                                        
+                                    </div>
+                                </div>
+                               
+                        {% endfor %}
+                    {% else %}
+                        <p>There are currently no reviews for this product</p>
+                    {% endif %}
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+
     
     <div class="row text-center justify-content-center product-font">
         <div class="col-12 col-lg-6  review-form">

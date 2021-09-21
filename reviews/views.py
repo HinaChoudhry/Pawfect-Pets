@@ -28,6 +28,8 @@ def add_review(request, product_id):
     template = 'products/products.html'
     context = {
         'form': form,
+        
+        
     }
 
     return render(request, template, context)
@@ -36,7 +38,7 @@ def add_review(request, product_id):
 @login_required
 def edit_review(request, product_id):
     """ Edit a review in the store """
-
+    
     review = get_object_or_404(Review)
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES, instance=review)
