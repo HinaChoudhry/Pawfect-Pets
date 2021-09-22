@@ -1,4 +1,4 @@
-
+   
     <!-- Header -->
     <div class="row justify-content-center product-font">
         <div class="col-12 ">
@@ -8,34 +8,34 @@
         </div>
     </div>
 
-    <div class="container product-font">
-        <div class="col-md-12">
+    <div class="container product-font checkout-bg-color ">
+        <div class=" ">
             
-                <div class=" rounded shadow-sm p-4 mb-4">
+                <div class=" rounded shadow-sm p-4 mb-4 review-bg-color">
                    
                     <div class=" pt-4 pb-4">
                         {% if reviews %}
                         {% for review in reviews %}
                                 <div class="row align-items-start review-detail mt-3">
-                                    <div class="col-4">
-                                        <h6 class="mb-1 text-full">{{ review.user }}</h6>
-                                        <p class="text-gray text-full">{{ review.date }}</p>
+                                   
+                                       
+                                  
+                                    <div class="col-12 col-lg-12 text-center ">
                                         
-                                    </div>
-                                    <div class="">
-                                        
-                                        <div class="text-full">
-                                            <p>{{ review.title }}</p>
+                                        <div class="text-full font-weight-bold">
+                                            <h4 class="font-weight-bold">{{ review.title }}</h4>
                                         </div>
-                                        <div class="text-full">
+                                        <div class="text-full font-weight-bold">
                                             <p>{{ review.comment }}</p>
                                         </div>
-                                        
+                                        <h6 class="mb-1 text-full">{{ review.user }}</h6>
+                                        <p class="text-gray text-full ">{{ review.date }}</p>
                                             <div>
+                                                
+                                                <a href="{% url 'edit_review' review.id %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
                                                 <button type="button" class="btn btn-full text-full" data-toggle="modal" data-target="#deleteReview-{{ review.id }}"><i class="fas fa-trash-alt"></i></button>
-                                                <a href="{% url 'edit_review' review.id %}"" class="btn btn-clear"><i class="fas fa-edit"></i></a>
                                             </div>
-                                        
+                                        <hr>
                                     </div>
                                 </div>
                                
@@ -43,7 +43,7 @@
                     {% else %}
                         <p>There are currently no reviews for this product</p>
                     {% endif %}
-                <hr>
+                
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
     
     <div class="row text-center justify-content-center product-font">
         <div class="col-12 col-lg-6  review-form">
-            <h5 class="mb-4 review-write-detail">Leave a Review</h5>
+            <h5 class="mb-4 review-write-detail font-weight-bold">Leave a Review</h5>
             <form method="POST" action="{% url 'add_review' product.id %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
