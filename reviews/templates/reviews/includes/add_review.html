@@ -32,8 +32,9 @@
                                         <p class="text-gray text-full ">{{ review.date }}</p>
                                             <div>
                                                 
-                                                <a href="{% url 'edit_review' review.id %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
-                                                <button type="button" class="btn btn-full text-full" data-toggle="modal" data-target="#deleteReview-{{ review.id }}"><i class="fas fa-trash-alt"></i></button>
+                                                <a href="{% url 'edit_review' review.id  product.id   %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
+                                                <a class="btn btn-clear" href="#"><i class="fas fa-trash-alt"></i></a>
+                                               
                                             </div>
                                         <hr>
                                     </div>

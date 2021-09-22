@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 from .models import Review, Product
 from .forms import ReviewForm
+from products.models import Product
 
 
 # Create your views here.
@@ -36,29 +37,36 @@ def add_review(request, product_id):
 
 
 @login_required
-def edit_review(request, product_id):
-    """ Edit a review in the store """
-    
-    review = get_object_or_404(Review)
+def edit_review(request, review_id, product_id):
+    """ Edit a review in the store """        
+
+    product = get_object_or_404(Product, pk=product_id)
+    review = get_object_or_404(Review, pk=review_id)
     if request.method == 'POST':
-        form = ReviewForm(request.POST, request.FILES, instance=review)
+
+        form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
+            print("Called")
+
             form.save()
             messages.success(request, 'Successfully updated review!')
-            return redirect(reverse('product_detail', args=[review.id]))
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to update review. Please ensure the form is valid.')
     else:
         form = ReviewForm(instance=review)
-        messages.info(request, f'You are reviewing {product.name}')
+        messages.info(request, f'You are editing your review for {product.name}')
 
-    template = 'products/edit_review.html'
+    template = 'edit_review.html'
     context = {
         'form': form,
         'review': review,
+        'product_id': product_id,
+        'review_id': review_id,
+        
     }
 
-    return render(request, template, context)
+    return render(request, 'reviews/edit_review.html', context)
 
 
 @login_required

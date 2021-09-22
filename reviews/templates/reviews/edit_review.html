@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
 <div class="row text-center justify-content-center product-font">
     <div class="col-12 col-lg-6  review-form">
-        <h5 class="mb-4 review-write-detail">Leave a Review</h5>
-        <form method="POST" action="{% url 'add_review' product.id %}" enctype="multipart/form-data">
+        <h5 class="mb-4 review-write-detail">Edit your Review</h5>
+        <form method="POST" action="{% url 'edit_review'  review_id product_id %}" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
                 
@@ -13,8 +22,7 @@
             </div>
             <div class="form-group">
                 <a class="btn btn-secondary rounded-0" href="{% url 'products' %}">Cancel</a>
-                <button class="btn btn-dark text-full rounded-0" type="submit"> Submit
-                </button>
+                <input type="submit" />
             </div>
         </form>
     </div>
