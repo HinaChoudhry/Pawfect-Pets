@@ -30,7 +30,7 @@
                                         </div>
                                         <h6 class="mb-1 text-full">{{ review.user }}</h6>
                                         <p class="text-gray text-full ">{{ review.date }}</p>
-                                            {% if request.user == review.user %}
+                                            {% if review.user == request.user.userprofile %}
                                         <div>
                                             <a href="{% url 'edit_review' review.id  product.id   %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
                                             <a class="btn btn-clear" href="{% url 'delete_review' review.id product.id %}"><i class="fas fa-trash-alt"></i></a>
