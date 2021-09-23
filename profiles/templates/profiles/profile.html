@@ -80,12 +80,11 @@
 
         <!-- Reviews history table -->
         <div class="col-12 col-lg-4  checkout-bg-color vertical-rule ">
-            <p">Reviews History</p>
+            <p>Reviews History</p>
             <div class="order-history table-responsive ">
                 <table class="table table-sm table-borderless">
                     <thead>
                         <tr>
-                            
                             <th>Date</th>
                             <th>Title</th>
                             <th>Comment</th>
@@ -99,11 +98,9 @@
                                         
                                  
                                 </td>
-                                <td>{{ review.title|truncatechars:6 }}</td>
-                                <td>
-                                   
-                                </td>
-                                <td>{{ review.comment|truncatechars:10 }}</td>
+                                <td>{{ review.title|truncatechars:10 }}</td>
+                                
+                                <td>{{ review.comment|truncatechars:20 }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
