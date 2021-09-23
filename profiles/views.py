@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 
+from reviews.models import Review
+
 from checkout.models import Order
 
 
@@ -23,10 +25,12 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
+    reviews = Review.objects.filter(user=profile)
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'reviews': reviews,
         'on_profile_page': True
     }
 

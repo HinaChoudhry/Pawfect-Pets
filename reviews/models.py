@@ -3,6 +3,8 @@ from django.db import models
 from profiles.models import UserProfile
 from products.models import Product
 
+from django.contrib.auth.models import User
+
 
 class Review(models.Model):
     """ 

@@ -37,7 +37,7 @@
         </div>
         <!-- Order History table -->
         <div class="col-12 col-lg-4  checkout-bg-color">
-            <p class="text-muted">Order History</p>
+            <p>Order History</p>
             <div class="order-history table-responsive ">
                 <table class="table table-sm table-borderless">
                     <thead>
@@ -80,30 +80,30 @@
 
         <!-- Reviews history table -->
         <div class="col-12 col-lg-4  checkout-bg-color vertical-rule ">
-            <p class="text-muted">Reviews History</p>
+            <p">Reviews History</p>
             <div class="order-history table-responsive ">
                 <table class="table table-sm table-borderless">
                     <thead>
                         <tr>
-                            <th>Review</th>
+                            
                             <th>Date</th>
                             <th>Title</th>
+                            <th>Comment</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for review in reviews %}
                             <tr>
                                 <td>
-                                    <a href="{% url 'order_history' order.order_number %}"
-                                    title="{{ order.order_number }}">
-                                        {{ review.title|truncatechars:6 }}
-                                    </a>
+                                    {{ review.date }}
+                                        
+                                 
                                 </td>
-                                <td>{{ review.date }}</td>
+                                <td>{{ review.title|truncatechars:6 }}</td>
                                 <td>
                                    
                                 </td>
-                                <td>${{ order.comment|truncatechars:10 }}</td>
+                                <td>{{ review.comment|truncatechars:10 }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
