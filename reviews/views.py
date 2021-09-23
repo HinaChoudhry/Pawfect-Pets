@@ -70,13 +70,15 @@ def edit_review(request, review_id, product_id):
 
 
 @login_required
-def delete_review(request, product_id):
+def delete_review(request, review_id,  product_id):
     """ Delete a review from the store """
+    
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only superusers can do that')
         return redirect(reverse('home'))
-        
-    review = get_object_or_404(Review)
+    
+    product = get_object_or_404(Product, pk=product_id)
+    review = get_object_or_404(Review, pk=review_id)
     review.delete()
     messages.success(request, 'Review deleted!')
     return redirect(reverse('products'))
