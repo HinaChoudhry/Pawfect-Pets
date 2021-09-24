@@ -11,13 +11,42 @@
 
 {% block content %}
     
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h1 class="product-font text-center"><strong>Blog</strong></h1>
-                <hr class="w-50 mb-1">
+<div class="row justify-content-center product-font">
+    <div class="col-12 ">
+      <h1 class="product-font mb-4 text-full text-center font-weight-bold">Blog</h1>
+        <hr >
+    </div>
+</div>
+
+<div class="container product-font checkout-bg-color ">
+    <div class="justify-content-center ">
+        <div class=" rounded shadow-sm p-4 mb-4 review-bg-color">
+            <div class=" pt-4 pb-4">
+                <div class="row align-items-start review-detail mt-3">
+                    <!-- Fill in these details with blog post title, intro and link to read the bigger post-->
+                </div>
             </div>
         </div>
     </div>
 
+
+
+<div class="row text-center justify-content-center product-font">
+    <div class="col-12 col-lg-6  review-form">
+        <h5 class="mb-4 review-write-detail font-weight-bold">Add a Post</h5>
+        <form method="POST" action="#" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                
+                {{ form | crispy }}
+            </div>
+            <div class="form-group">
+                <a class="btn btn-secondary rounded-0" href="#">Cancel</a>
+                <button class="btn btn-dark text-full rounded-0" type="submit"> Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
     {% endblock %}
