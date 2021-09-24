@@ -1,3 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 
-# Create your views here.
+from .forms import BlogPostForm, BlogCommentForm
+
+from .models import BlogPost, BlogComment
+
+def blog(request):
+    """ This view returns the blog page"""
+    blogposts = BlogPost.objects.all().order_by("-date")
+
+    
+    template = 'blog/blog.html'
+    context = {
+       'blogposts': blogposts
+    }
+
+    return render(request, template, context)

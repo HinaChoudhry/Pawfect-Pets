@@ -24,4 +24,4 @@ class BlogPostForm(forms.ModelForm):
 class BlogCommentForm(forms.ModelForm):
     class Meta: 
         model = BlogComment
-        fields = ('comment')
+        fields = ('comment',)
