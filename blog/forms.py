@@ -1,6 +1,7 @@
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import BlogPost, BlogComment
+from products.models import Category
 
 class BlogPostForm(forms.ModelForm):
     class Meta:
