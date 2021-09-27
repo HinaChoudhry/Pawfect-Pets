@@ -18,23 +18,26 @@
     </div>
 </div>
 
-<div class="container product-font checkout-bg-color ">
-    <div class="justify-content-center ">
+<div class="container product-font  justify-content-center checkout-bg-color ">
+    <div class=>
         <div class=" rounded shadow-sm p-4 mb-4 review-bg-color">
             <div class=" pt-4 pb-4">
                 <div class="row align-items-start review-detail mt-3">
+                    <div class="col">
                     {% for blogpost in blogposts %}
-                    <div>{{ blogpost.blog_title }}</div>
-                    <div>{{ blogpost.blog_intro }}</div>
-                    <div>{{ blogpost.blog_content }}</div>
+                    <h2 class="text-center"><u>{{ blogpost.blog_title }}</u></h2><br>
+                    <h5 class="text-center">{{ blogpost.blog_intro }}</h5><br>
+                    <a href="#">Read more</a>
+                        <hr>
                     {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    &nbsp;
 
-
-
+{% if request.user.is_superuser %}
 <div class="row text-center justify-content-center product-font">
     <div class="col-12 col-lg-6  review-form">
         <h5 class="mb-4 review-write-detail font-weight-bold">Add a Post</h5>
@@ -53,4 +56,5 @@
     </div>
 </div>
 </div>
+{% endif %}
     {% endblock %}
