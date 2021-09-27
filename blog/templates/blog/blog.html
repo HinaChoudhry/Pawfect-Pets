@@ -29,16 +29,17 @@
                     <h5 class="text-center">{{ blogpost.blog_intro }}</h5><br>
                     <a href="#">Read more</a>
                         
-                    {% endfor %}
+                    
                     </div>
                 </div>
            
                 {% if request.user.is_superuser %}
             <div>
-                <a href="#" class="btn btn-clear"><i class="fas fa-edit"></i></a>
+                <a href="{% url 'edit_blog_post' blogpost.id  %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
                 <a class="btn btn-clear" href="#"><i class="fas fa-trash-alt"></i></a>
             </div>
             {% endif %}
+            {% endfor %}
             <hr>
         </div>
         </div>

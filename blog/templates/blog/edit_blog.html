@@ -14,7 +14,7 @@
 <div class="row text-center justify-content-center product-font">
     <div class="col-12 col-lg-6  review-form">
         <h5 class="mb-4 review-write-detail">Edit Blog App</h5>
-        <form method="POST" action="{% url 'edit_blog_post'  %}" enctype="multipart/form-data">
+        <form method="POST" action="{% url 'edit_blog_post' blogpost.id  %}" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
                 
