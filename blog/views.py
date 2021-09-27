@@ -33,7 +33,7 @@ def add_blog_post(request):
             blogpost.author = request.user
             blogpost = form.save()
             messages.success(request, 'Successfully added blog post')
-            return redirect(reverse('blog', args=[product.id]))
+            return redirect(reverse('blog'))
         else:
             messages.error(request, 'Failed to add blog post. Please ensure the form is valid.')
     else:

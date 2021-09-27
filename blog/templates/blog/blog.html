@@ -23,7 +23,11 @@
         <div class=" rounded shadow-sm p-4 mb-4 review-bg-color">
             <div class=" pt-4 pb-4">
                 <div class="row align-items-start review-detail mt-3">
-                    <!-- Fill in these details with blog post title, intro and link to read the bigger post-->
+                    {% for blogpost in blogposts %}
+                    <div>{{ blogpost.blog_title }}</div>
+                    <div>{{ blogpost.blog_intro }}</div>
+                    <div>{{ blogpost.blog_content }}</div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -34,7 +38,7 @@
 <div class="row text-center justify-content-center product-font">
     <div class="col-12 col-lg-6  review-form">
         <h5 class="mb-4 review-write-detail font-weight-bold">Add a Post</h5>
-        <form method="POST" action="{% url 'add_blog_post' %}" enctype="multipart/form-data">
+        <form method="POST" action="{% url 'add_blog_post'  %}" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
                 
