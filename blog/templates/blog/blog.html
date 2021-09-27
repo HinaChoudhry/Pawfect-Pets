@@ -28,12 +28,21 @@
                     <h2 class="text-center"><u>{{ blogpost.blog_title }}</u></h2><br>
                     <h5 class="text-center">{{ blogpost.blog_intro }}</h5><br>
                     <a href="#">Read more</a>
-                        <hr>
+                        
                     {% endfor %}
                     </div>
                 </div>
+           
+                {% if request.user.is_superuser %}
+            <div>
+                <a href="#" class="btn btn-clear"><i class="fas fa-edit"></i></a>
+                <a class="btn btn-clear" href="#"><i class="fas fa-trash-alt"></i></a>
             </div>
+            {% endif %}
+            <hr>
         </div>
+        </div>
+       
     </div>
     &nbsp;
 
