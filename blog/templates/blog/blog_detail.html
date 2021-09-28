@@ -16,23 +16,31 @@
 {% block content %}
     
     <!-- blog post contaoiner -->
-<div class="container container-pad mt-2 mb-5">
-    {% for blogpost in blogposts %}
-        <div class="row">
-            <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5">
-                <h2 class="post-title">{{ blogpost.title }}</h2>
-                <hr>
-                <small class="p-2 text-muted">Author - {{ blogpost.author }}</small><br>
-                <small class="p-2 text-muted">{{ blogpost.date }}</small>
-            </div>
-            {% if blogpost.image %}
-                <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-2">
-                    <img src="{{ MEDIA_URL }}{{ blogpost.image }}" alt="Image for {{ blogpost.title }}" class="img-fluid">
-                </div>
-            {% endif %}
-                <div class="mt-3 mb-5 p-2 post-body">
-                    {{ blogpost.blog_content }}
-                </div>
-           {% endfor %}
+<div class="container container-pad mt-2 mb-5 product-font">
+   <div class="row ">
+        <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5">
+            <h2 class="font-weight-bold text-center">{{ blogpost.blog_title }}</h2>
+            <hr>
+            <small class="p-2 text-muted">Author - {{ blogpost.author }}</small><br>
+            <small class="p-2 text-muted">{{ blogpost.date }}</small>
         </div>
+    
+        <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-2 blog-img text-center">
+            <img src="{{ MEDIA_URL }}{{ blogpost.image }}" alt="Image for {{ blogpost.title }}" class="img-fluid">
+        </div>
+        <br>
     </div>
+        <div class="mt-3 mb-5 p-2 text-center ">
+            {{ blogpost.blog_content }}
+        </div>
+    
+    {% if request.user.is_superuser %}
+    <div>
+        <a href="{% url 'edit_blog_post' blogpost.id  %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
+        <a class="btn btn-clear" href="{% url 'delete_blog_post' blogpost.id %}"><i class="fas fa-trash-alt"></i></a>
+    </div>
+    <hr>
+{% endif %}
+</div>
+
+    {% endblock %}

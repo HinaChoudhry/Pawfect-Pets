@@ -29,7 +29,7 @@
                     
                     <h2 class="text-center"><u>{{ blogpost.blog_title }}</u></h2><br>
                     <h5 class="text-center">{{ blogpost.blog_intro }}</h5><br>
-                    <a href="#">Read more</a>
+                    <a href="{% url 'blog_detail' blogpost.id %}">Read more</a>
                         
                     
                     </div>

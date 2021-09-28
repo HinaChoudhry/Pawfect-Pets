@@ -19,6 +19,18 @@ def blog(request):
     return render(request, template, context)
 
 
+def blog_detail(request, blogpost_id):
+    blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
+    comments = BlogComment.objects.filter(blogpost=blogpost)
+
+    context = {
+        'blogpost': blogpost,
+        'comments': comments,
+    }
+
+    return render(request, 'blog/blog_detail.html', context)
+
+
 @login_required
 def add_blog_post(request):
     """ Add a blog post """
