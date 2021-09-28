@@ -21,11 +21,13 @@ def blog(request):
 
 def blog_detail(request, blogpost_id):
     blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
+    form = BlogCommentForm()
     comments = BlogComment.objects.filter(blogpost=blogpost)
 
     context = {
         'blogpost': blogpost,
         'comments': comments,
+        'form': form,
     }
 
     return render(request, 'blog/blog_detail.html', context)
@@ -108,3 +110,30 @@ def delete_blog_post(request, blogpost_id):
     blogpost.delete()
     messages.success(request, 'Blog post deleted!')
     return redirect(reverse('blog'))
+
+
+@login_required
+def add_blog_comment(request):
+    """ Add a blog post """
+       
+    if request.method == 'POST':
+        form = BlogCommentForm(request.POST, request.FILES)
+        if form.is_valid():
+            blogcomment = form.save(commit=False)
+            blogcomment.author = request.user
+            blogcomment = form.save()
+            messages.success(request, 'Successfully added comment')
+            return redirect(reverse('blog'))
+        else:
+            messages.error(request, 'Failed to add blog post. Please ensure the form is valid.')
+    else:
+        form = BlogCommentForm()
+        
+    template = 'blog/blog_detail.html'
+    context = {
+        'blogposts': blogposts,
+        'form': form,
+       
+    }
+
+    return render(request, template, context)
