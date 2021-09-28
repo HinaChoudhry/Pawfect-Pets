@@ -22,9 +22,11 @@
     <div class=>
         <div class=" rounded shadow-sm p-4 mb-4 review-bg-color">
             <div class=" pt-4 pb-4">
+                {% for blogpost in blogposts %}
                 <div class="row align-items-start review-detail mt-3">
+                    
                     <div class="col">
-                    {% for blogpost in blogposts %}
+                    
                     <h2 class="text-center"><u>{{ blogpost.blog_title }}</u></h2><br>
                     <h5 class="text-center">{{ blogpost.blog_intro }}</h5><br>
                     <a href="#">Read more</a>
@@ -38,10 +40,13 @@
                 <a href="{% url 'edit_blog_post' blogpost.id  %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
                 <a class="btn btn-clear" href="#"><i class="fas fa-trash-alt"></i></a>
             </div>
-            {% endif %}
-            {% endfor %}
             <hr>
+            {% endif %}
+           
+            
+            {% endfor %}
         </div>
+       
         </div>
        
     </div>
