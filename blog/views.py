@@ -113,17 +113,18 @@ def delete_blog_post(request, blogpost_id):
 
 
 @login_required
-def add_blog_comment(request):
+def add_blog_comment(request, blogcomment_id):
     """ Add a blog post """
-       
+    blogcomment = get_object_or_404(BlogComment, pk=blogcomment_id)
     if request.method == 'POST':
         form = BlogCommentForm(request.POST, request.FILES)
         if form.is_valid():
             blogcomment = form.save(commit=False)
             blogcomment.author = request.user
+            blogcomment.blogpost = blogpost
             blogcomment = form.save()
             messages.success(request, 'Successfully added comment')
-            return redirect(reverse('blog'))
+            return redirect(reverse('blog_detail', args=[blogcomment_id]))
         else:
             messages.error(request, 'Failed to add blog post. Please ensure the form is valid.')
     else:
@@ -131,7 +132,8 @@ def add_blog_comment(request):
         
     template = 'blog/blog_detail.html'
     context = {
-        'blogposts': blogposts,
+       
+        'blogcomment': blogcomment,
         'form': form,
        
     }
