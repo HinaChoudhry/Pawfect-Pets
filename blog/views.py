@@ -116,10 +116,14 @@ def delete_blog_post(request, blogpost_id):
 def add_blog_comment(request, blogpost_id):
     """ Add a blog comment """
     
+    blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
     if request.method == 'POST':
         form = BlogCommentForm(request.POST, request.FILES)
         if form.is_valid():
             blogcomment = form.save(commit=False)
+            blogcomment.blogpost = blogpost
+            blogcomment.user = request.user
+            blogcomment.save()        
             messages.success(request, 'Successfully added comment')
             return redirect(reverse('blog_detail', args=[blogpost_id]))
         else:
