@@ -53,24 +53,27 @@
                 <hr>
             </div>
             
-            <div>
-                {% for blogcomment in blogcomments %}
-                <p class="mt-3 mb-3 btn-text">{{ blogcomment.comment }}</p>
-                <small class="text-muted">by - {{ blogcomment.user }}</small><br />
-                <small class="text-muted">{{ blogcomment.date }}</small>
+            <div> 
+                {% if comments %}
+                {% for comment in comments %} 
+                <p >{{ comment.comment }}</p>
+                <small class="text-muted">by - {{ comment.user }}</small><br>
+                <small class="text-muted">{{ comment.date }}</small>
             </div>
             <hr>
+            {% endfor %}
+               
+            {% else %}
             <div>
-                {% empty %}
-                <h4 class="text-start mb-3 ms-3">No Comments to show</h4>
+                <h4 class=" mb-3 ms-3">No Comments to show</h4>
                 <hr>
-                
+                {% endif %}
             </div>
           
         </div>
         </div></div>  
 <!-- Add a comment -->
-<div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5">
+<div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5 product-font">
         <h5 class="mb-4 review-write-detail font-weight-bold">Add a Comment</h5>
         <form method="POST" action="{% url 'add_blog_comment'  blogpost.id %}" enctype="multipart/form-data">
             {% csrf_token %}
@@ -84,7 +87,6 @@
                 </button>
             </div>
         </form>
-        {% endfor %}
+    </div>
     
     {% endblock %}
-</div>

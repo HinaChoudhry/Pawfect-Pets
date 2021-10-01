@@ -91,11 +91,8 @@ def edit_blog_post(request, blogpost_id):
     context = {
         'blogpost': blogpost,
         'form': form,
-        
-        
-        
     }
-    
+
     return render(request, template, context)
 
 
