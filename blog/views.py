@@ -133,8 +133,8 @@ def add_blog_comment(request, blogpost_id):
        
         'blogcomment': blogcomment,
         'form': form,
-        
-       
     }
 
     return render(request, template, context)
+
+
