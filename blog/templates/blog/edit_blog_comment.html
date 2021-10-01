@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5 product-font">
+    <h5 class="mb-4 review-write-detail font-weight-bold">Edit a Comment</h5>
+    <form method="POST" action="{% url 'edit_blog_comment'  blogcomment_id blogpost_id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            
+            {{ form | crispy }}
+        </div>
+        <div class="">
+            <a class="btn btn-secondary rounded-0" href="#">Cancel</a>
+            <button class="btn btn-dark text-full rounded-0" type="submit"> Submit
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

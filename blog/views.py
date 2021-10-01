@@ -5,6 +5,7 @@ from .forms import BlogPostForm, BlogCommentForm
 from .models import BlogPost, BlogComment
 
 
+
 def blog(request):
     """ This view returns the blog page"""
     blogposts = BlogPost.objects.all().order_by("-date")
@@ -138,3 +139,35 @@ def add_blog_comment(request, blogpost_id):
     return render(request, template, context)
 
 
+@login_required
+def edit_blog_comment(request, blogcomment_id, blogpost_id):
+    """ Edit a blog comment in the blog """        
+
+    blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
+    blogcomment = get_object_or_404(BlogComment, pk=blogcomment_id)
+    if request.method == 'POST':
+
+        form = BlogCommentForm(request.POST, instance=blogcomment)
+        if form.is_valid():
+           
+
+            form.save()
+            messages.success(request, 'Successfully updated comment!')
+            return redirect(reverse('blog_detail', args=[blogpost.id]))
+        else:
+            messages.error(request, 'Failed to update comment. Please ensure the form is valid.')
+    else:
+        form = BlogCommentForm(instance=blogcomment)
+        messages.info(request, f'You are editing your comment for {blogpost.blog_title}')
+
+    template = 'edit_blog_comment.html'
+    context = {
+        'form': form,
+        'blogcomment': blogcomment,
+        'blogpost_id': blogpost_id,
+        'blogcomment_id': blogcomment_id,
+        
+        
+    }
+
+    return render(request, 'blog/edit_blog_comment.html', context)
