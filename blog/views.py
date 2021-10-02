@@ -170,3 +170,13 @@ def edit_blog_comment(request, blogcomment_id, blogpost_id):
     }
 
     return render(request, 'blog/edit_blog_comment.html', context)
+
+
+@login_required
+def delete_blog_comment(request, blogcomment_id):
+    """ Delete a review from the store """
+    
+    blogcomment = get_object_or_404(BlogComment, pk=blogcomment_id)
+    blogcomment.delete()
+    messages.success(request, 'Blog comment deleted!')
+    return redirect(reverse('blog'))
