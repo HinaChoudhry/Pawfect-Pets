@@ -141,8 +141,7 @@ def add_blog_comment(request, blogpost_id):
 
 @login_required
 def edit_blog_comment(request, blogcomment_id, blogpost_id):
-    """ Edit a blog comment in the blog """        
-
+    """ Edit a blog comment in the blog """
     blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
     blogcomment = get_object_or_404(BlogComment, pk=blogcomment_id)
     if request.method == 'POST':
