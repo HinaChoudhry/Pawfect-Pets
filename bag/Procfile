@@ -1,0 +1,1 @@
+web: gunicorn pawfect_pets:wsgi:application

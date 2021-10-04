@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-4&$(p9o9m#adw_90!2jo7sa347w5&@!9rl6yh9u99$@jqtz82^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pawfect-pets.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -119,12 +119,18 @@ WSGI_APPLICATION = 'pawfect_pets.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE+URL'))
     }
-}
+else: 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 
