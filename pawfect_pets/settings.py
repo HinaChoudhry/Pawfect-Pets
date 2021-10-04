@@ -122,7 +122,7 @@ WSGI_APPLICATION = 'pawfect_pets.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE+URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else: 
     DATABASES = {
