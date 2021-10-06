@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -14,109 +14,118 @@
 {% endblock %}
 
 {% block content %}
-    
-    <!-- Blog post display -->
+
+<!-- Blog post display -->
 <div class="container container-pad mt-2 mb-5 product-font">
-   <div class="row ">
+    <div class="row ">
         <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5">
             <h2 class="font-weight-bold text-center">{{ blogpost.blog_title }}</h2>
             <hr>
             <small class="p-2 text-muted">Author - {{ blogpost.author }}</small><br>
             <small class="p-2 text-muted">{{ blogpost.date }}</small>
         </div>
-    
+
         <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-2 blog-img text-center">
             <img src="{{ MEDIA_URL }}{{ blogpost.image }}" alt="Image for {{ blogpost.title }}" class="img-fluid">
         </div>
         <br>
     </div>
-        <div class="mt-3 mb-5 p-2 text-center ">
-            {{ blogpost.blog_content }}
-        </div>
-    
+    <div class="mt-3 mb-5 p-2 text-center ">
+        {{ blogpost.blog_content }}
+    </div>
+
     {% if request.user.is_superuser %}
     <div class="justify-content-center">
         <a href="{% url 'edit_blog_post' blogpost.id  %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
         <a class="btn btn-clear" href="{% url 'delete_blog_post' blogpost.id %}"><i class="fas fa-trash-alt"></i></a>
     </div>
-   
-{% endif %}
+
+    {% endif %}
 
 </div>
-    
+
 <!-- comments -->
-<div class = "text-center product-font">
+<div class="text-center product-font">
     <div class="row mt-3 mb-5 ">
         <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5 review-bg-color">
             <div class="inline-div ">
                 <h4 class="font-weight-bold mb-3 ms-3 ">Comments</h4>
                 <hr>
             </div>
-            
-            <div class=""> 
+
+            <div class="">
                 {% if comments %}
-                {% for comment in comments %} 
-                <p >{{ comment.comment }}</p>
+                {% for comment in comments %}
+                <p>{{ comment.comment }}</p>
                 <small class="text-muted">by - {{ comment.user }}</small><br>
                 <small class="text-muted">{{ comment.date }}</small>
-                
+
                 {% if comment.user == request.user %}
-            <div>
-                <a href="{% url 'edit_blog_comment' comment.id  blogpost.id %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
-                <a class="btn btn-clear" href="#" id="delete-modal"><i class="fas fa-trash-alt"></i></a>
-            </div>
+                <div>
+                    <a href="{% url 'edit_blog_comment' comment.id  blogpost.id %}" class="btn btn-clear"><i
+                            class="fas fa-edit"></i></a>
+                            <button type="button" class="" data-toggle="modal" data-target="#delete-modal{{ forloop.counter }}"><i
+                                class="fas fa-trash-alt"></i></button>
+                    
+                </div>
                 {% endif %}
-               
-            <hr>
-            {% endfor %}
+
+                <hr>
+
+                <!--Modal -->
+                <div class="comment-modal  modal" id="delete-modal{{ forloop.counter }}">
+                    <div class="comment-modal-content">
+                        <div class="close"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <p>Are you sure you want to delete your comment?</p>
+                        <p>This cannot be undone!</p>
+                        <a class="btn btn-clear" href="{% url 'blog' %}">Cancel</a>
+                        <a class="btn btn-clear" href="{% url 'delete_blog_comment' comment.id %}">Delete</a>
+                    </div>
+                </div>
+
+                {% endfor %}
             </div>
-              
-           
-          
+
+
+
             {% else %}
             <div>
                 <h4 class=" mb-3 ms-3">No Comments to show</h4>
                 <hr>
                 {% endif %}
             </div>
-          
+
         </div>
-        </div></div>  
+    </div>
+</div>
 <!-- Add a comment -->
 <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5 product-font">
-        <h5 class="mb-4 review-write-detail font-weight-bold">Add a Comment</h5>
-        <form method="POST" action="{% url 'add_blog_comment'  blogpost.id %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="form-group">
-                
-                {{ form | crispy }}
-            </div>
-            <div class="">
-                <a class="btn btn-secondary rounded-0" href="#">Cancel</a>
-                <button class="btn btn-dark text-full rounded-0" type="submit"> Submit
-                </button>
-            </div>
-        </form>
-    </div>
-    
+    <h5 class="mb-4 review-write-detail font-weight-bold">Add a Comment</h5>
+    <form method="POST" action="{% url 'add_blog_comment'  blogpost.id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
 
-
-
-    <!--Modal -->
-    <div class="comment-modal">
-        <div class="comment-modal-content">
-            <div class="close-button click-close2"><i class="fa fa-times fa-lg" aria-hidden="true"></i>
-            </div>
-            <p>Are you sure you want to delete your comment?</p>
-            <p>This cannot be undone!</p>
-            <a class="btn btn-clear" href="#">Cancel</a>
-            <a class="btn btn-clear" href="{% url 'delete_blog_comment' blogpost.id comment.id %}">Delete</a>
+            {{ form | crispy }}
         </div>
-    </div>
+        <div class="">
+            <a class="btn btn-secondary rounded-0" href="#">Cancel</a>
+            <button class="btn btn-dark text-full rounded-0" type="submit"> Submit
+            </button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
 
 
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
-    <script src="{% static 'blog/js/blog.js' %}"></script>
+<script src="{% static 'blog/js/blog.js' %}"></script>
 {% endblock %}
