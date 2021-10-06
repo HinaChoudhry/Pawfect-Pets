@@ -63,7 +63,7 @@
                 {% if comment.user == request.user %}
             <div>
                 <a href="{% url 'edit_blog_comment' comment.id  blogpost.id %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
-                <a class="btn btn-clear" href="#" id="delete-modal" data-target="#deleteComment-{{ comment.id }}" ><i class="fas fa-trash-alt"></i></a>
+                <a class="btn btn-clear" href="#" id="delete-modal"><i class="fas fa-trash-alt"></i></a>
             </div>
                 {% endif %}
                
@@ -103,14 +103,14 @@
 
 
     <!--Modal -->
-    <div class="comment-modal" id="deleteComment-{{ comment.id }}">
+    <div class="comment-modal">
         <div class="comment-modal-content">
             <div class="close-button click-close2"><i class="fa fa-times fa-lg" aria-hidden="true"></i>
             </div>
             <p>Are you sure you want to delete your comment?</p>
             <p>This cannot be undone!</p>
             <a class="btn btn-clear" href="#">Cancel</a>
-            <a class="btn btn-clear" href="{% url 'delete_blog_comment' comment.id %}">Delete</a>
+            <a class="btn btn-clear" href="{% url 'delete_blog_comment' blogpost.id comment.id %}">Delete</a>
         </div>
     </div>
 
