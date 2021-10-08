@@ -25,18 +25,18 @@
                 {% for blogpost in blogposts %}
                 <div class="row align-items-start review-detail mt-3">
                     
-                    <div class="col">
+                    <div class="col text-center">
                     
-                    <h2 class="text-center"><u>{{ blogpost.blog_title }}</u></h2><br>
-                    <h5 class="text-center">{{ blogpost.blog_intro }}</h5><br>
-                    <a href="{% url 'blog_detail' blogpost.id %}">Read more</a>
+                    <h2><u>{{ blogpost.blog_title }}</u></h2><br>
+                    <h5>{{ blogpost.blog_intro }}</h5><br>
+                    <a href="{% url 'blog_detail' blogpost.id %}" >Read more</a>
                         
                     
                     </div>
                 </div>
            
                 {% if request.user.is_superuser %}
-            <div>
+            <div class="text-center">
                 <a href="{% url 'edit_blog_post' blogpost.id  %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
                 <a class="btn btn-clear" href="{% url 'delete_blog_post' blogpost.id %}"><i class="fas fa-trash-alt"></i></a>
             </div>
