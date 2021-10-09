@@ -8,76 +8,76 @@ Testing information can be found at TESTING.md
 
 ## User Story Tests
 
-As a user – 
-•	I want to be able to search for products – 
-Users are able to search for products via the search bar
+As a user 
+- I want to be able to search for products 
+    * Users are able to search for products via the search bar
 
-•	I want to be able to see the number of products found in a search result – 
-The search result displays how many items have been found within a search
+- I want to be able to see the number of products found in a search result – 
+    * The search result displays how many items have been found within a search
 
-•	I want to be able to navigate the website easily – 
-There is a navbar with links for navigation to significant pages of the website. This navbar also shrinks down into a hamburger menu. The colors and fonts of the website were also carefully considered for readability 
+- I want to be able to navigate the website easily – 
+    * There is a navbar with links for navigation to significant pages of the website. This navbar also shrinks down into a hamburger menu. The colors and fonts of the website were also carefully considered for readability 
 
-•	I want to be able to see a list of products 
-All products are displayed on the Products page. These can be displayed, sorted by price, alphabetically and category if the user wishes. The products are also viewable, separated by category if the user clicks the relative Dog, Cat or Small Animal links. 
+- I want to be able to see a list of products 
+    * All products are displayed on the Products page. These can be displayed, sorted by price, alphabetically and category if the user wishes. The products are also viewable, separated by category if the user clicks the relative Dog, Cat or Small Animal links. 
 
-•	I want to be able to see a further detailed summary of each product with descriptions, price and reviews
-A product details page is part of the website. In this, there is a larger image of the selected product as well as name and description. The product details page also allows the user to purchase certain quantities of the product, and there is also a section of user reviews, with the ability to leave a review on the product’s page as well. 
-•	I want to be able to register an account for myself
-Users are able to register themselves for an account. 
+- I want to be able to see a further detailed summary of each product with descriptions, price and reviews
+    * A product details page is part of the website. In this, there is a larger image of the selected product as well as name and description. The product details page also allows the user to purchase certain quantities of the product, and there is also a section of user reviews, with the ability to leave a review on the product’s page as well. 
+- I want to be able to register an account for myself
+    * Users are able to register themselves for an account. 
  
-•	I want to be able to log back into my account once I have registered
-Users details are saved and they are able to log back in once they have registered. 
+- I want to be able to log back into my account once I have registered
+    * Users details are saved and they are able to log back in once they have registered. 
 
-•	I want to be able to write reviews for products
-Users can write product reviews for any of the products but log in is required for this. 
+- I want to be able to write reviews for products
+    * Users can write product reviews for any of the products but log in is required for this. 
 
-•	I want to be able to edit and/or delete reviews I have written
-. Users have the ability to edit and delete their own reviews as well but not other users. Log in is required to edit/delete reviews.
+- I want to be able to edit and/or delete reviews I have written
+    * Users have the ability to edit and delete their own reviews as well but not other users. Log in is required to edit/delete reviews.
 
-•	I want to be able to see my previous orders and reviews
-Users can see their default delivery details and order and review history on the ‘My Profile’ page. This gives a summary of previous orders and reviews with a more detailed delivery section. 
+- I want to be able to see my previous orders and reviews
+    * Users can see their default delivery details and order and review history on the ‘My Profile’ page. This gives a summary of previous orders and reviews with a more detailed delivery section. 
 
-•	I want social media links for the website so I can follow them
-The footer contains social media links that open up into new tabs. 
+- I want social media links for the website so I can follow them
+    * The footer contains social media links that open up into new tabs. 
 
-•	I want to be able to purchase products
-Users can make ‘purchases’ via the website using the Test Stripe payment details. 
+- I want to be able to purchase products
+    * Users can make ‘purchases’ via the website using the Test Stripe payment details. 
 
-•	I want to be able to select the quantity of products that I want to purchase 
-The quantity of a product can be selected, ranging from 1-99. 
+- I want to be able to select the quantity of products that I want to purchase 
+    * The quantity of a product can be selected, ranging from 1-99. 
 
-•	I want to be able to view all of the items in my shopping bag before proceeding to the checkout
-Users are brought to the shopping bag page before going to checkout. This page details a summary of the products that are currently in the shopping bag, which are to be purchased. 
+- I want to be able to view all of the items in my shopping bag before proceeding to the checkout
+    * Users are brought to the shopping bag page before going to checkout. This page details a summary of the products that are currently in the shopping bag, which are to be purchased. 
 
-•	I want to be able to sort products by category, A-Z, price and by name
-There is a sorter on the products page that allows users to sort by category, A-Z, price and by name. 
+- I want to be able to sort products by category, A-Z, price and by name
+    * There is a sorter on the products page that allows users to sort by category, A-Z, price and by name. 
 
-•	I want to be able to view blog posts on the website
-Users are able to view blog posts on the website on the Blog page and in more depth on the Blog detail page. 
+- I want to be able to view blog posts on the website
+    * Users are able to view blog posts on the website on the Blog page and in more depth on the Blog detail page. 
 
-•	I want to be able to comment on blog posts
-Logged in users are able to comment on individual blog posts 
+- I want to be able to comment on blog posts
+    * Logged in users are able to comment on individual blog posts 
 
-•	I want to be able to edit/delete my comment on the blog posts 
-Registered users can amend and delete their comments on blog posts 
+- I want to be able to edit/delete my comment on the blog posts 
+    * Registered users can amend and delete their comments on blog posts 
 
-As an admin – 
-•	I want to be able to add a product to the website
-The admin can add a product to the website, with details and images being uploaded for the product. 
+As an admin 
+- I want to be able to add a product to the website
+    * The admin can add a product to the website, with details and images being uploaded for the product. 
 
-•	I want to be able to edit/update a product
-The admin can make amendments to individual products and save these changes to the product detail page. There is an edit button on both the product and products detail page to edit the product. 
+- I want to be able to edit/update a product
+The admin can make amendments to individual products and save these changes to the product detail page. There is an edit button on both the product and products detail page to     * edit the product. 
 
-•	I want to be able to delete products
-The admin is able to delete products from both the products page and product details page. 
+- I want to be able to delete products
+    * The admin is able to delete products from both the products page and product details page. 
 
-•	I want to be able to post blog posts
-The admin is able to add a blog post to the website, including an image to go along with the post. 
-•	I want to be able to edit blog posts
-The admin is able to amend previously written blog posts and save these changes made to the post. 
-•	I want to be able to delete blog posts
-The admin is able to delete blog posts. 
+- I want to be able to post blog posts
+    * The admin is able to add a blog post to the website, including an image to go along with the post. 
+- I want to be able to edit blog posts
+    * The admin is able to amend previously written blog posts and save these changes made to the post. 
+- I want to be able to delete blog posts
+    * The admin is able to delete blog posts. 
 
 
 ## Manual Testing 
@@ -244,44 +244,43 @@ The website was again responsive on Microsoft Edge with no bugs found.
 
 
 ## Bugs and solutions
-* Hero text from index.html not appearing properly 
-- Removed the fixed top to allow it to be visible on the webpage
+- Hero text from index.html not appearing properly 
+    * Removed the fixed top to allow it to be visible on the webpage
 
-* Mobile navbar and desktop navbars were not displaying correctly 
-- Added the relevant closing div tag to correct this
+- Mobile navbar and desktop navbars were not displaying correctly 
+    * Added the relevant closing div tag to correct this
 
-* Mobile navbar was pushing images down below it rather than overlaying over them when clicked 
-- Changed position to absolute and gave the navbar a z index in order to fix this 
+- Mobile navbar was pushing images down below it rather than overlaying over them when clicked 
+    * Changed position to absolute and gave the navbar a z index in order to fix this 
 
-* Links were not clickable
-- Removed the “data toggle” attribute from the links to enable clicking/dropdown functioning
+- Links were not clickable
+    * Removed the “data toggle” attribute from the links to enable clicking/dropdown functioning
 
-* Stripe Country selector was not allowing users to correctly select which country they are in, instead only using a 2 letter term eg GB/UK. 
-- Changed the checkout model and form for the country field to a dropdown selection list instead of a charfield
+- Stripe Country selector was not allowing users to correctly select which country they are in, instead only using a 2 letter term eg GB/UK. 
+    * 
+- Form submission for reviews not working – 
+    * Resolved by correcting a misspelling in the reviews views.py
 
-* Form submission for reviews not working – 
-- Resolved by correcting a misspelling in the reviews views.py
+- Reviews were not rendering once submitted
+    * Added “review=” and “review:review” to the product_detail function in the product views.py
 
-* Reviews were not rendering once submitted
-- Added “review=” and “review:review” to the product_detail function in the product views.py
+- Changes made the to user reviews were not saving 
+    * Resolved by swapping the order of “review_id” and “product_id” in the edit_review function in views.py, to match the order of the ids in the urls.py 
 
-* Changes made the to user reviews were not saving 
-- Resolved by swapping the order of “review_id” and “product_id” in the edit_review function in views.py, to match the order of the ids in the urls.py 
+- Reviews were not deleting – 
+    * Added “<int:review.id>” to the delete url path. 
 
-* Reviews were not deleting – 
-- Added “<int:review.id>” to the delete url path. 
-
-* Edit and delete buttons were made for users to be able to delete and edit only their own reviews but the if statement written was hiding them for all users
-- Resolved by adding “userprofile” to the end of review.user  = review.user
+- Edit and delete buttons were made for users to be able to delete and edit only their own reviews but the if statement written was hiding them for all users
+    * Resolved by adding “userprofile” to the end of review.user  = review.user
 
 
-* When creating the blog template to post blogs, “blogpost” in the add_blog_post function in views.py was undefined
-- Resolved by imported model into the views.py
+- When creating the blog template to post blogs, “blogpost” in the add_blog_post function in views.py was undefined
+    * Resolved by imported model into the views.py
 
-* Blog posts were not rendering 
-- Removed “args=blogpost.id” in the add_blog_post function to resolve this. 
+- Blog posts were not rendering 
+    * Removed “args=blogpost.id” in the add_blog_post function to resolve this. 
 
-* Users not able to edit blog comments 
-- Had to update url link to comment.id rather than blogcomment.id
+- Users not able to edit blog comments 
+    * Had to update url link to comment.id rather than blogcomment.id
 
 ## Unresolved bugs
