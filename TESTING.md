@@ -1,5 +1,5 @@
 # Testing
-Testing information can be found at TESTING.md
+
 ## Code Validation
 - [W3C Mark-up Validation](https://validator.w3.org/) was used for checking for validity of html. 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. 
