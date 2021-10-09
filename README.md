@@ -1,7 +1,7 @@
 # Milestone Project 4 – Pawfect Pets
 
 My fourth and final milestone project is for Pawfect Pets, a full stack e-commerce website for pet toys. It contains a homepage, products page, product detail page, shopping bag, checkout page, user profile page and a blog page. This is a full stack e-commerce website using HTML, CSS, JavaScript, Python and the Django Framework. The aim of the website is to sell products to potential customers and have them regularly use the site as a means of buying pet toys for their pets. 
-[Pawfect Pets]( https://pawfect-pets.herokuapp.com/) 
+[Pawfect Pets](https://pawfect-pets.herokuapp.com/) 
 Please note that the card payment details for Stripe should be entered as 4242 recurring as otherwise, it will show as invalid card details. 
 
 
@@ -21,7 +21,7 @@ Please note that the card payment details for Stripe should be entered as 4242 r
 
 4. [Testing](#testing)
 
- 5. [Technology used](#technology-used)
+5. [Technology used](#technology-used)
 
 6. [Deployment](#deployment)
 
@@ -275,7 +275,7 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
                 
 * Next, go to the bucket Permissions section.
 * In the cors config paste in the below:
-                 ```
+                ```
                     [
                         {
                             "AllowedHeaders": [
@@ -292,7 +292,7 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
                             ]
                         }
                     ]
-                  ```
+                ```
     * In bucket policy, click “generate policy”
     * Select S3 bucket policy
     * Add * to the field to select all principals
@@ -323,7 +323,7 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
 * Add these to the requirements.txt with the command - `pip3 freeze > requirements.txt`
 
 USE_AWS, an environmental variable needs to be set up to run code on Heroku. The settings should be as below in settings.py - 
-             ```
+            ```
                 if "USE_AWS" in os.environ:
                     # Bucket configurations
                     AWS_STORAGE_BUCKET_NAME = "bucket name"
@@ -340,7 +340,7 @@ USE_AWS, an environmental variable needs to be set up to run code on Heroku. The
 
                     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
                     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-              ```
+            ```
 * Back in heroku click on settings tab and then click reveal config vars.
 * Then set up the environmental variables as required.
 * Back in the IDE, we need to create a custom storages.py to tell django that in production we want to use Amazon S3 to store our static and media files
@@ -368,11 +368,12 @@ USE_AWS, an environmental variable needs to be set up to run code on Heroku. The
             
 * Open your IDE and open the folder containing the code and download the requirements needed to run the project with the command -` pip3 install -r requirements.txt `
 * Next, set up the below environmental variables - 
-    * DJANGO_SECRET_KEY = *YOUR SECRET KEY*
-    * STRIPE_PUBLIC_KEY = *YOUR STRIPE PUBLIC KEY*
-    * STRIPE_SECRET_KEY = *YOUR STRIPE SECRET KEY
-    * STRIPE_WH_SECRET = *YOUR STRIPE WEBHOOK SECRET KEY*
-    * IN_DEVELOPMENT = True
+    ``` DJANGO_SECRET_KEY = *YOUR SECRET KEY*
+    STRIPE_PUBLIC_KEY = *YOUR STRIPE PUBLIC KEY*
+    STRIPE_SECRET_KEY = *YOUR STRIPE SECRET KEY
+    STRIPE_WH_SECRET = *YOUR STRIPE WEBHOOK SECRET KEY*
+    IN_DEVELOPMENT = True
+    ```
 
 * Migrate your database model with the following 4 commands –
 	
