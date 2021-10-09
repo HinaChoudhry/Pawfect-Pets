@@ -15,7 +15,7 @@ Please note that the card payment details for Stripe should be entered as 4242 r
     * [Font](#font)
     * [Colours](#colours)
 
-2. [Features]{#features)
+2. [Features](#features)
 
 3. [Database](#database)
 
@@ -30,10 +30,10 @@ Please note that the card payment details for Stripe should be entered as 4242 r
 8. [Disclaimer](#disclaimer)
     
 
-##UX <a name=”ux”></a>
+## UX <a name=”ux”></a>
 The website is for pet lovers who want to buy toys for their pets. The site caters to dogs, cats and small animals currently with appropriate toys. The overall layout chosen was to attract users to the website without it looking too busy and without there being too much for the user to look at, at one time. 
 
-###User Stories <a name=”user-stories”></a>
+### User Stories <a name=”user-stories”></a>
 
 As a user – 
 •	I want to be able to search for products
@@ -65,7 +65,7 @@ As an admin –
 •	I want to be able to edit blog posts
 •	I want to be able to delete blog posts
 
-###Wireframes <a name=”wireframes”></a>
+### Wireframes <a name=”wireframes”></a>
 
 The Balsamiq programme was used to create my wireframes for my project. Building the wireframes before starting to build my project allowed me to plan what I was aiming to make and also allowed me to discuss the layout of the website with my mentor in advance. 
 
@@ -120,7 +120,7 @@ I used Google Fonts for my project and have used DM Serif Text for the navbar lo
 ### Colors <a name=”colors”></a>
 The colours of the website were chosen in order to keep the design simple, yet attractive. From looking at different e-commerce websites, I noticed that many used a palette of white and black with one more colour and so I decided to do something similar. For my palette, I went for #000, #FFF, #88daf3 and #d9f3f57e; which is black, white, bright blue and a calm blue. Initially, I went with green instead of blue but it resembled the Pets At Home website too much so I changed this for the blue. 
 
-##Features <a name=”features”></a>
+## Features <a name=”features”></a>
 ### Existing Features
 
 ### Homepage
@@ -167,8 +167,7 @@ The Blog page gives a taster of what blogs are available for users to read, with
 The blog detail page is where users can read blog posts in full as well as leave comments. The Blog Detail page includes a related image to the blog post, a title, author, date posted and text sections. Logged in users can also leave comments here on the blog post. 
 
 ## Database schema  <a name=”database”></a>
-![db schema]
-(https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/database/database%20schema.png)
+![db schema](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/database/database%20schema.png)
 
 
 ## Technologies Used  <a name=”technology-used”></a>
@@ -184,11 +183,10 @@ The blog detail page is where users can read blog posts in full as well as leave
 - [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) To use alongside Bootstrap.
 - [Python](https://www.python.org/)For the backend functionality of the wesite
 - [Django]( https://www.djangoproject.com/) as the Framework and for back-end coding. 
-- [Heroku] 
 - [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) – For the account functionality of the project. 
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) Used for all forms in the website
 - [Stripe](https://stripe.com/) For the payment section
-- [Heroku] [Heroku](https://signup.heroku.com/) For deployment of the website
+- [Heroku](https://signup.heroku.com/) For deployment of the website
 - [AWS](https://aws.amazon.com/) For storing images and static files from the website. 
 - [Balsamiq](www.balsamiq.com) To create wireframes for the website.  
 - [DBDiagrams](dbdiagrams.io) to the build the database schema 
@@ -214,75 +212,69 @@ To deploy the website to Heroku the following steps were taken.
     * Name the app and choose the region closest to you
     * Select ‘create app’
 
-* Set up the postgres database.
-
-        * Go to app resources section in Heroku, search for postgres
-        * Add the chosen project and choose the free plan
-        * Install dj_database_url and psycopg2 in GitPod using the command ‘pip install’ 
-    	* Add the dependencies to the requirements file by typing in ‘pip3 freeze > requirements.txt’
-        * Import dj_database_url in the settings.py 
-	* Comment out the current database settings and replace with the postgres database (this is an environmental variable and should not be shown in version control).
-        *Next, in order to migrate the models to the new database use the command – ‘python manage.py migrate’
-	*Set up a superuser using the command – “python3 manage.py createsuperuser”
-        * Commit the changes making sure not to include the environmental variables in version control. 
-        
-        * Then, I created an if-else statement in the settings.py to use Postgres if the DATABASE_URL variable is available and otherwise use the default database in gitpod.
-        ```
-        if "DATABASE_URL" in os.environ:
-                DATABASES = {
-                    "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
+* Set up the postgres database
+    * Go to app resources section in Heroku, search for postgres
+    * Add the chosen project and choose the free plan
+    * Install dj_database_url and psycopg2 in GitPod using the command ‘pip install’ 
+    * Add the dependencies to the requirements file by typing in ‘pip3 freeze > requirements.txt’
+    * Import dj_database_url in the settings.py 
+* Comment out the current database settings and replace with the postgres database (this is an environmental variable and should not be shown in version control).
+    *Next, in order to migrate the models to the new database use the command – ‘python manage.py migrate’
+* Set up a superuser using the command – “python3 manage.py createsuperuser”
+    * Commit the changes making sure not to include the environmental variables in version control. 
+    * Then, I created an if-else statement in the settings.py to use Postgres if the DATABASE_URL variable is available and otherwise use the default database in gitpod.
+    ```
+    if "DATABASE_URL" in os.environ:
+            DATABASES = {
+                "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+        else:
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': BASE_DIR / 'db.sqlite3',
                 }
-          else:
-                DATABASES = {
-                    'default': {
-                        'ENGINE': 'django.db.backends.sqlite3',
-                        'NAME': BASE_DIR / 'db.sqlite3',
-                    }
-                }
-        ```
-        * The postgres database should now be ready for use.
+            }
+    ```
+* The postgres database should now be ready for use.
 
 
 
 
-	* To tell Heroku the app is a web app, the following steps were taken -   
+* To tell Heroku the app is a web app, the following steps were taken -   
 	* Install Gunicorn by using the command ‘pip3 install Gunicorn’      
-        *Create a Procfile by using the command ‘touch Procfile’
-        * In the Procfile, it needs to know to use a webserver – use the command - 
-             “web: gunicorn <appname>.wsgi:application”
+    * Create a Procfile by using the command ‘touch Procfile’
+    * In the Procfile, it needs to know to use a webserver – use the command - 
+        “web: gunicorn <appname>.wsgi:application”
 	* Next, connect Heroku to the GitPod terminal by using the following command – ‘heroku login -I’
 	* Log in with the email and password used to create an account on Heroku.
-	
-    
-    
-        
-        * then, I disabled the collection of static files temporarily until AWS has been set up.
-            * `heroku config:set DISABLE_COLLECTSTATIC=1 --app <appname>`
-            * the --app command is used when you have more than one app in your heroku account
+    * then, I disabled the collection of static files temporarily until AWS has been set up.
+        * `heroku config:set DISABLE_COLLECTSTATIC=1 --app <appname>`
+        * the --app command is used when you have more than one app in your heroku account
 
 
-	In Settings, add Heroku to the list of allowed hosts and localhost using the following - 
-“ALLOWED_HOSTS = ["<heroku appname>.herokuapp.com", "localhost"]”
-        * Push the changes to GitHub
-	* Then push the Heroku by using heroku git:remote -a <heroku appname>
-       * Push the app to GitHub using -`git push heroku master` and Heroku should now build the app.
+In Settings, add Heroku to the list of allowed hosts and localhost using the following - 
+`“ALLOWED_HOSTS = ["<heroku appname>.herokuapp.com", "localhost"]”`
+* Push the changes to GitHub
+* Then push the Heroku by using `heroku git:remote -a <heroku appname>`
+* Push the app to GitHub using -`git push heroku master` and Heroku should now build the app.
 
     
-    * Next, On the Heroku Website, go the deploy selection of the relevant app 
-	*When selected and connect click ‘enable automatic deploys and GitHub should now automatically push changes to Heroku too
+* Next, On the Heroku Website, go the deploy selection of the relevant app 
+* When selected and connect click ‘enable automatic deploys' and GitHub should now automatically push changes to Heroku too
     
-Amazon AWS was used to store both static and media files of the website –
-	* Create an AWS Account and/or sign in
-        * To create a bucket search for the aws s3 service
-        * Click on ‘create bucket’
-	*Name the bucket and select your region, unchecking ‘block public access’ and also acknowledge the bucket will be public. 
-	* click create bucket.
+* Amazon AWS was used to store both static and media files of the website –
+* Create an AWS Account and/or sign in
+    * To create a bucket search for the aws s3 service
+    * Click on ‘create bucket’
+* Name the bucket and select your region, unchecking ‘block public access’ and also acknowledge the bucket will be public. 
+    * click create bucket.
         * Amend the Bucket settings as such - 
         * Go to the bucket Properties section and turn on static web hosting
         * In the index and error text inputs add index.html and error.html, then click ‘save’.  
                 
-            * Next, go to the bucket Permissions section.
-            * In the cors config paste in the below:
+* Next, go to the bucket Permissions section.
+* In the cors config paste in the below:
                  ```
                     [
                         {
@@ -301,37 +293,37 @@ Amazon AWS was used to store both static and media files of the website –
                         }
                     ]
                   ```
-            * In bucket policy, click “generate policy”
-            * Select S3 bucket policy
-            * Add * to the field to select all principals
-            * select action to get object
-            * Paste in your ARN (found on the bucket policy page)
-            * click “add statement” then the “generate policy button”
-	    * Copy and paste the new policy into your bucket policy, adding /* to the end of the resources key and click ‘save’. 
+    * In bucket policy, click “generate policy”
+    * Select S3 bucket policy
+    * Add * to the field to select all principals
+    * select action to get object
+    * Paste in your ARN (found on the bucket policy page)
+    * click “add statement” then the “generate policy button”
+* Copy and paste the new policy into your bucket policy, adding /* to the end of the resources key and click ‘save’. 
                   
-            * Go to the Access Control List section.
-            * set list objects permission to “everyone.”
+    * Go to the Access Control List section.
+    a* set list objects permission to “everyone.”
 	* On the admin page for AWS, search “IAM” to add a new user
-	*Create a new group by clicking “new group” and give it a name
+	* Create a new group by clicking “new group” and give it a name
 	* Create a group policy by clicking “policy” and then “create policy”
-	Search for s3 and select Amazon3fullaccess and then import. 
-	*Past in the ARN used in the resources section and click “review policy”
-	*Fill the name and description and click “generate”
-	*Then, click “permissions” and attach the policy.
-	*To create a user, select users and click on “add user”
-	*Create a username and select “programmatic access” then “next”. 
+	* Search for s3 and select Amazon3fullaccess and then import. 
+	* Past in the ARN used in the resources section and click “review policy”
+	* Fill the name and description and click “generate”
+	* Then, click “permissions” and attach the policy.
+	* To create a user, select users and click on “add user”
+	* Create a username and select “programmatic access” then “next”. 
 	* Select the group and click “create user”. 
 	* Download the CVS file
-	*Connect to Django by installing two packages to the IDE with the commands - 
+	* Connect to Django by installing two packages to the IDE with the commands - 
 
     ```
                 pip3 install boto3
                 pip3 install django-storages
               ```
-        * Add these to the requirements.txt with the command - `pip3 freeze > requirements.txt`
+* Add these to the requirements.txt with the command - `pip3 freeze > requirements.txt`
 
-	USE_AWS, an environmental variable needs to be set up to run code on Heroku. The settings should be as below in settings.py - 
-            * ```
+USE_AWS, an environmental variable needs to be set up to run code on Heroku. The settings should be as below in settings.py - 
+             ```
                 if "USE_AWS" in os.environ:
                     # Bucket configurations
                     AWS_STORAGE_BUCKET_NAME = "bucket name"
@@ -349,52 +341,53 @@ Amazon AWS was used to store both static and media files of the website –
                     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
                     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
               ```
-        * Back in heroku click on settings tab and then click reveal config vars.
-        * Then set up the environmental variables as required.
-        * Back in the IDE, we need to create a custom storages.py to tell django that in production we want to use Amazon S3 to store our static and media files
-        * import S3Boto3Storage at the top of the custom_storages.py file.
-        * Set up classes to tell django where to store the files as shown below:
-            * ```
+* Back in heroku click on settings tab and then click reveal config vars.
+* Then set up the environmental variables as required.
+* Back in the IDE, we need to create a custom storages.py to tell django that in production we want to use Amazon S3 to store our static and media files
+* import S3Boto3Storage at the top of the custom_storages.py file.
+* Set up classes to tell django where to store the files as shown below:
+    * ```
                 class StaticStorage(S3Boto3Storage):
                     location = settings.STATICFILES_LOCATION
                 
                 class MediaStorage(S3Boto3Storage):
                     location = settings.MEDIAFILES_LOCATION
               ```
-        * push all the changes to Github 
+    * push all the changes to Github 
     
     * Add Media files to AWS
         * in your AWS bucket, create a new folder called media
         * select “upload” and upload your image files, then select “grand public access”. 
-	*Next, click “upload”       
+	* Next, click “upload”       
 
  
 
 ### Setting the project up locally
 
-        * Find your github repository and on the dropdown menu click “Download zip”, then extract the files to your repository. 
+* Find your github repository and on the dropdown menu click “Download zip”, then extract the files to your repository. 
             
-       *Open your IDE and open the folder containing the code and download the requirements needed to run the project with the command -` pip3 install -r requirements.txt `
-	* Next, set up the below environmental variables - 
-            * DJANGO_SECRET_KEY = *YOUR SECRET KEY*
-            * STRIPE_PUBLIC_KEY = *YOUR STRIPE PUBLIC KEY*
-            * STRIPE_SECRET_KEY = *YOUR STRIPE SECRET KEY
-            * STRIPE_WH_SECRET = *YOUR STRIPE WEBHOOK SECRET KEY*
-            * IN_DEVELOPMENT = True
+* Open your IDE and open the folder containing the code and download the requirements needed to run the project with the command -` pip3 install -r requirements.txt `
+* Next, set up the below environmental variables - 
+    * DJANGO_SECRET_KEY = *YOUR SECRET KEY*
+    * STRIPE_PUBLIC_KEY = *YOUR STRIPE PUBLIC KEY*
+    * STRIPE_SECRET_KEY = *YOUR STRIPE SECRET KEY
+    * STRIPE_WH_SECRET = *YOUR STRIPE WEBHOOK SECRET KEY*
+    * IN_DEVELOPMENT = True
 
-	* Migrate your database model with the following 4 commands –
+* Migrate your database model with the following 4 commands –
 	
-                *`python3 manage.py makemigrations --dry-run
+    * `python3 manage.py makemigrations --dry-run`
             
-                * `python3 manage.py makemigrations`
+    * `python3 manage.py makemigrations`
            
-                * `python3 manage.py migrate --plan `
+    * `python3 manage.py migrate --plan `
             
-                * `python3 manage.py migrate`
-	*Next, create a superuser with the command - 
-           ` python3 manage.py createsuperuser `
-        * enter your own username and password
-        *Run the app if you now like with the command “python3 manage.py runserver”. 
+    * `python3 manage.py migrate`
+
+* Next, create a superuser with the command - 
+        ` python3 manage.py createsuperuser `
+    * enter your own username and password
+    * Run the app if you now like with the command “python3 manage.py runserver”. 
 
 
 
