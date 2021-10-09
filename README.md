@@ -35,35 +35,35 @@ The website is for pet lovers who want to buy toys for their pets. The site cate
 
 ### User Stories <a name=”user-stories”></a>
 
-As a user – 
-•	I want to be able to search for products
-•	I want to be able to see the number of products found in a search result
-•	I want to be able to navigate the website easily
-•	I want to be able to see a list of products 
-•	I want to be able to see a further detailed summary of each product with descriptions, price and reviews
-•	I want to be able to register an account for myself 
-•	I want to be able to log back into my account once I have registered
-•	I want to be able to write reviews for products
-•	I want to be able to edit and/or delete reviews I have written
-•	I want to be able to see my previous orders and reviews
-•	I want social media links for the website so I can follow them
-•	I want to be able to purchase products
-•	I want to be able to select the quantity of products that I want to purchase 
-•	I want to be able to view all of the items in my shopping bag before proceeding to the checkout
-•	I want to be able to sort products by category, A-Z, price and by name
-•	I want to be able to view blog posts on the website
-•	I want a FAQ section to see information about the website
-•	I want to be able to read a blog
-•	I want to be able to comment on the blog
-•	I want to be able to edit/delete my comments on the blog
+As a user 
+- I want to be able to search for products
+- I want to be able to see the number of products found in a search result
+- I want to be able to navigate the website easily
+- I want to be able to see a list of products 
+- I want to be able to see a further detailed summary of each product with descriptions, price and reviews
+- I want to be able to register an account for myself 
+- I want to be able to log back into my account once I have registered
+- I want to be able to write reviews for products
+- I want to be able to edit and/or delete reviews I have written
+- I want to be able to see my previous orders and reviews
+- I want social media links for the website so I can follow them
+- I want to be able to purchase products
+- I want to be able to select the quantity of products that I want to purchase 
+- I want to be able to view all of the items in my shopping bag before proceeding to the checkout
+- I want to be able to sort products by category, A-Z, price and by name
+- I want to be able to view blog posts on the website
+- I want a FAQ section to see information about the website
+- I want to be able to read a blog
+- I want to be able to comment on the blog
+- I want to be able to edit/delete my comments on the blog
 
-As an admin – 
-•	I want to be able to add a product to the website
-•	I want to be able to edit/update a product
-•	I want to be able to delete products
-•	I want to be able to post blog posts
-•	I want to be able to edit blog posts
-•	I want to be able to delete blog posts
+As an admin 
+- I want to be able to add a product to the website
+- I want to be able to edit/update a product
+- I want to be able to delete products
+- I want to be able to post blog posts
+- I want to be able to edit blog posts
+- I want to be able to delete blog posts
 
 ### Wireframes <a name=”wireframes”></a>
 
@@ -173,7 +173,7 @@ The blog detail page is where users can read blog posts in full as well as leave
 ## Technologies Used  <a name=”technology-used”></a>
 - [HTML](https://en.wikipedia.org/wiki/HTML) To enable the basic building on the website.
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) for styling the website 
-- [JavaScript] (https://www.javascript.com/) for the interactivity  
+- [JavaScript](https://www.javascript.com/) for the interactivity  
 - [Bootstrap](https://getbootstrap.com/) for structure, responsiveness and pre-made classes. 
 - [GitHub](https://github.com/) Where I can have my repository saved for my project. 
 - [Gitpod](https://www.gitpod.io/) My preferred IDE for building the website.
@@ -275,24 +275,24 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
                 
 * Next, go to the bucket Permissions section.
 * In the cors config paste in the below:
-                ```
-                    [
-                        {
-                            "AllowedHeaders": [
-                                "Authorization"
-                            ],
-                            "AllowedMethods": [
-                                "GET"
-                            ],
-                            "AllowedOrigins": [
-                                "*"
-                            ],
-                            "ExposedHeaders": [
+```
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposedHeaders": [
 
-                            ]
-                        }
-                    ]
-                ```
+            ]
+        }
+    ]
+```
     * In bucket policy, click “generate policy”
     * Select S3 bucket policy
     * Add * to the field to select all principals
@@ -302,7 +302,7 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
 * Copy and paste the new policy into your bucket policy, adding /* to the end of the resources key and click ‘save’. 
                   
     * Go to the Access Control List section.
-    a* set list objects permission to “everyone.”
+    * Set list objects permission to “everyone.”
 	* On the admin page for AWS, search “IAM” to add a new user
 	* Create a new group by clicking “new group” and give it a name
 	* Create a group policy by clicking “policy” and then “create policy”
@@ -323,24 +323,25 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
 * Add these to the requirements.txt with the command - `pip3 freeze > requirements.txt`
 
 USE_AWS, an environmental variable needs to be set up to run code on Heroku. The settings should be as below in settings.py - 
-            ```
-                if "USE_AWS" in os.environ:
-                    # Bucket configurations
-                    AWS_STORAGE_BUCKET_NAME = "bucket name"
-                    AWS_S3_REGION_NAME = "bucket region"
-                    AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID") 
-                    AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY") 
-                    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
+    if "USE_AWS" in os.environ:
+        # Bucket configurations
+        AWS_STORAGE_BUCKET_NAME = "bucket name"
+        AWS_S3_REGION_NAME = "bucket region"
+        AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID") 
+        AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY") 
+        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
-                    # static and media files
-                    STATICFILES_STORAGE = "custom_storages.StaticStorage"
-                    STATICFILES_LOCATION = "static"
-                    DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
-                    MEDIAFILES_LOCATION = "media"
+        # static and media files
+        STATICFILES_STORAGE = "custom_storages.StaticStorage"
+        STATICFILES_LOCATION = "static"
+        DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
+        MEDIAFILES_LOCATION = "media"
 
-                    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
-                    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-            ```
+        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+```
 * Back in heroku click on settings tab and then click reveal config vars.
 * Then set up the environmental variables as required.
 * Back in the IDE, we need to create a custom storages.py to tell django that in production we want to use Amazon S3 to store our static and media files
