@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import BlogPost, BlogComment
 
 
-
 # Register your models here.
 class BlogPostAdmin(admin.ModelAdmin):
     """ Creates the admin interface for Blog posts """
@@ -13,14 +12,11 @@ class BlogPostAdmin(admin.ModelAdmin):
         'blog_title',
         'blog_intro',
         'blog_content'
-        
     )
-
 
 
 class BlogCommentAdmin(admin.ModelAdmin):
     """ Creates the admin interface for Blog Comments """
-    
     list_display = (
         'blogpost',
         'comment',

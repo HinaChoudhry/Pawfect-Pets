@@ -3,13 +3,15 @@ from .widgets import CustomClearableFileInput
 from .models import BlogPost, BlogComment
 from products.models import Category
 
+
 class BlogPostForm(forms.ModelForm):
     class Meta:
         model = BlogPost
-        fields = ('blog_title', 'blog_intro', 
-                'blog_content', 'image',)
+        fields = ('blog_title', 'blog_intro',
+                  'blog_content', 'image',)
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+                label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -22,6 +24,6 @@ class BlogPostForm(forms.ModelForm):
 
 
 class BlogCommentForm(forms.ModelForm):
-    class Meta: 
+    class Meta:
         model = BlogComment
         fields = ('comment',)

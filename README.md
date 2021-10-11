@@ -293,7 +293,7 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
         }
     ]
 ```
-    * In bucket policy, click “generate policy”
+* In bucket policy, click “generate policy”
     * Select S3 bucket policy
     * Add * to the field to select all principals
     * select action to get object
