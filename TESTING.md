@@ -251,14 +251,15 @@ The website was again responsive on Microsoft Edge with no bugs found.
     * Added the relevant closing div tag to correct this
 
 - Mobile navbar was pushing images down below it rather than overlaying over them when clicked 
-    * Changed position to absolute and gave the navbar a z index in order to fix this 
+    * Changed position to absolute and gave the navbar a z-index in order to fix this 
 
 - Links were not clickable
     * Removed the “data toggle” attribute from the links to enable clicking/dropdown functioning
 
 - Stripe Country selector was not allowing users to correctly select which country they are in, instead only using a 2 letter term eg GB/UK. 
-    * 
-- Form submission for reviews not working – 
+    * Changed the checkout model and form for the country field to a dropdown selection list instead of a charfield
+
+- Form submission for reviews not working 
     * Resolved by correcting a misspelling in the reviews views.py
 
 - Reviews were not rendering once submitted
@@ -271,7 +272,7 @@ The website was again responsive on Microsoft Edge with no bugs found.
     * Added “<int:review.id>” to the delete url path. 
 
 - Edit and delete buttons were made for users to be able to delete and edit only their own reviews but the if statement written was hiding them for all users
-    * Resolved by adding “userprofile” to the end of review.user  = review.user
+    * Resolved by adding “userprofile” to the end of 'review.user  = review.user'
 
 
 - When creating the blog template to post blogs, “blogpost” in the add_blog_post function in views.py was undefined
@@ -281,6 +282,10 @@ The website was again responsive on Microsoft Edge with no bugs found.
     * Removed “args=blogpost.id” in the add_blog_post function to resolve this. 
 
 - Users not able to edit blog comments 
-    * Had to update url link to comment.id rather than blogcomment.id
+    * Had to update  the url link to 'comment.id' rather than 'blogcomment.id'
+
+- The 'Free Delivery' Banner was overflowing from the right side of the viewport
+    * Resolved by adding a 'container-fluid' div to the row and col
+
 
 ## Unresolved bugs
