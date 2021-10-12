@@ -6,7 +6,7 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ('title', 'comment',
-        )
+                  )
 
     def __init__(self, *args, **kwargs):
         """
@@ -19,7 +19,7 @@ class ReviewForm(forms.ModelForm):
         }
 
         # Add placeholders and classes to input fields
-        
+
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'

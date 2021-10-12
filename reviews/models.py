@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 
 class Review(models.Model):
-    """ 
+    """
     Creates a reviews model
     """
 

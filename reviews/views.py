@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Review, Product
+from .models import Review
 from .forms import ReviewForm
 from products.models import Product
 
@@ -22,15 +22,16 @@ def add_review(request, product_id):
             messages.success(request, 'Successfully added review')
             return redirect(reverse('product_detail', args=[product_id]))
         else:
-            messages.error(request, 'Failed to add review. Please ensure the form is valid')
+            messages.error(
+                request,
+                'Failed to add review. Please ensure the form is valid')
     else:
         form = ReviewForm()
-        
+
     template = 'products/products.html'
     context = {
         'form': form,
-        
-        
+
     }
 
     return render(request, template, context)
@@ -38,7 +39,7 @@ def add_review(request, product_id):
 
 @login_required
 def edit_review(request, review_id, product_id):
-    """ Edit a review in the store """        
+    """ Edit a review in the store """
 
     product = get_object_or_404(Product, pk=product_id)
     review = get_object_or_404(Review, pk=review_id)
@@ -50,18 +51,19 @@ def edit_review(request, review_id, product_id):
             messages.success(request, 'Successfully updated review!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update review. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update review. Please ensure the form is valid.')
     else:
         form = ReviewForm(instance=review)
-        messages.info(request, f'You are editing your review for {product.name}')
+        messages.info(
+            request, f'You are editing your review for {product.name}')
 
-    template = 'edit_review.html'
     context = {
         'form': form,
         'review': review,
         'product_id': product_id,
         'review_id': review_id,
-        
     }
 
     return render(request, 'reviews/edit_review.html', context)
@@ -70,12 +72,10 @@ def edit_review(request, review_id, product_id):
 @login_required
 def delete_review(request, review_id,  product_id):
     """ Delete a review from the store """
-    
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only superusers can do that')
         return redirect(reverse('home'))
-    
-    product = get_object_or_404(Product, pk=product_id)
+
     review = get_object_or_404(Review, pk=review_id)
     review.delete()
     messages.success(request, 'Review deleted!')

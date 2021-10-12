@@ -15,5 +15,3 @@ class ReviewAdmin(admin.ModelAdmin):
         'user',
         'date',
     )
-
-
