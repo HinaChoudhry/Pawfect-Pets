@@ -287,5 +287,8 @@ The website was again responsive on Microsoft Edge with no bugs found.
 - The 'Free Delivery' Banner was overflowing from the right side of the viewport
     * Resolved by adding a 'container-fluid' div to the row and col
 
+- The Blog and Blog Detail pages width was overflowing to the right side of the viewport
+    * Resolved by adding a 'container-fluid' div to the Blog row and col divs and to the Comments section in the Blog Detail template. 
+
 
 ## Unresolved bugs

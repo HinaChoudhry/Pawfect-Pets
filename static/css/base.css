@@ -10,11 +10,11 @@ html {
     background: url("/media/home_bg.jpg");
     background-repeat: no-repeat;
     background-size: contain;
-    height: 276px;
-    width: auto;
     background-position: center;
-       
+   
 }
+       
+
 
 .margin-index { 
     margin-bottom: 20%;
@@ -99,8 +99,39 @@ ul {
 }
 .index-font {
     Font-family: Quicksand;
-    Font-size: 4rem;
+    font-size: 4rem;
+    
 }
+  @media (max-width: 600px) {
+      .index-font {
+          font-size: 2rem;
+          margin-top: 20px;
+      }
+    }
+
+
+    @media (max-width: 400px) {
+      .index-font {
+            font-size: 1.5rem;
+            margin-top: 35px;
+      }
+    }
+
+
+    @media (max-width: 320px) {
+      .index-font{
+          font-size: 1rem;
+          margin-top: 30px;
+      }
+    }
+
+
+
+
+
+
+
+
 
 .dropdown-font {
     font-family: Quicksand;
