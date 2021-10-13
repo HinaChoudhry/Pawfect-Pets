@@ -45,32 +45,33 @@
 </div>
 
 <!-- comments -->
-<div class="text-center product-font">
-    <div class="row mt-3 mb-5 ">
-        <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5 review-bg-color">
-            <div class="inline-div ">
-                <h4 class="font-weight-bold mb-3 ms-3 ">Comments</h4>
-                <hr>
-            </div>
+<div class="container-fluid">
+    <div class="text-center product-font">
+        <div class="row mt-3 mb-5 ">
+            <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5 review-bg-color">
+                <div class="inline-div ">
+                    <h4 class="font-weight-bold mb-3 ms-3 ">Comments</h4>
+                    <hr>
+                </div>
 
-            <div class="">
-                {% if comments %}
-                {% for comment in comments %}
-                <p>{{ comment.comment }}</p>
-                <small class="text-muted">by - {{ comment.user }}</small><br>
-                <small class="text-muted">{{ comment.date }}</small>
+                <div class="">
+                    {% if comments %}
+                    {% for comment in comments %}
+                    <p>{{ comment.comment }}</p>
+                    <small class="text-muted">by - {{ comment.user }}</small><br>
+                    <small class="text-muted">{{ comment.date }}</small>
 
-                {% if comment.user == request.user %}
-                <div>
-                    <a href="{% url 'edit_blog_comment' comment.id  blogpost.id %}" class="btn btn-clear"><i
+                    {% if comment.user == request.user %}
+                        <div>
+                        <a href="{% url 'edit_blog_comment' comment.id  blogpost.id %}" class="btn btn-clear"><i
                             class="fas fa-edit"></i></a>
                             <button type="button" class="btn" data-toggle="modal" data-target="#delete-modal{{ forloop.counter }}"><i
                                 class="fas fa-trash-alt"></i></button>
                     
-                </div>
-                {% endif %}
+                        </div>
+                    {% endif %}
 
-                <hr>
+                    <hr>
 
                 <!-- Modal -->
                 <div class="modal fade text-center" id="delete-modal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="deleteLabel-{{ comment.id }}" aria-hidden="true">
@@ -94,12 +95,12 @@
                     </div>
                   </div>
 
-
+                </div>
 
 
 
         {% endfor %}
-    </div>
+    </div>  
 
 
 
