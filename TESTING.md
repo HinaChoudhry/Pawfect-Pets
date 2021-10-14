@@ -2,9 +2,9 @@
 
 ## Code Validation
 - [W3C Mark-up Validation](https://validator.w3.org/) was used for checking for validity of html. 
-- [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. 
-- [JSHint](https://jshint.com/) was used to check for validity of the JavaScript. 
-- For Python code, I used the in-built Gitpod linter to validate code. 
+- [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. There were [no errors](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/validation/CSS%20validation.jpg) in the CSS files. 
+- [JSHint](https://jshint.com/) was used to check for validity of the JavaScript. There were [no errors](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/validation/js%20validation.jpg) in the JavaScript files. 
+- For Python code, I used the in-built Gitpod linter to validate code. There are three warnings which I have not addressed for the following reasons. For lines that were too long in the migration files, these have been created by Django and the issue has been marked as a "won't fix" by the Django Team. For avoiding using null=True on string-based fields - this is to avoid having two values for a field if left blank, but as blank values are needed for forms, null affect the database storage. The unused imports are still required as they link up other parts of code that is needed for the code to work. 
 
 ## User Story Tests
 
@@ -222,11 +222,6 @@ On tablet, in the landscape position the profile page is the same as the desktop
 #### Mobile
 The layout on the mobile viewport is  similar to that on the portrait position with the profile sections being again, stacked up rather than being displayed in a row. 
 
-
-
-
-
-
 ## Browser Compatibility 
 
 ### Google Chrome
@@ -237,11 +232,6 @@ The website was also responsive in Firefox with no bugs being found while browsi
 
 ### Microsoft  Edge
 The website was again responsive on Microsoft Edge with no bugs found. 
-
-
-
-
-
 
 ## Bugs and solutions
 - Hero text from index.html not appearing properly 
@@ -292,5 +282,6 @@ The website was again responsive on Microsoft Edge with no bugs found.
 
 - The add_review and edit_review templates were overflowing the viewport as well on the right side. 
     * The class 'container-fluid' was added in an extra div to resolve this. 
+    
 ## Unresolved bugs
 - When trying to add a product via the Product Management tab, uploading a product without an image results in an error. However, if you navigate and search for the product just uploaded it displays with the 'no image' image and everything has uploaded correctly. 
