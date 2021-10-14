@@ -20,6 +20,7 @@
             </div>
         </div>
 
+        <!-- Bag Summary -->
         <div class="row">
             <div class="col">
                 {% if bag_items %}
@@ -81,6 +82,7 @@
                                         <a class="update-link text-info update-link"><small>Update</small></a>
                                         <a class="remove-item text-danger float-right remove-link" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
+                                    <!-- Amount details -->
                                     <td class="py-3">
                                         <h5 class="my-0 product-font font-weight-bold">£{{ item.product.price | calc_subtotal:item.quantity }}</h5>
                                     </td>
@@ -98,6 +100,7 @@
                                     {% endif %}
                                 </td>
                             </tr>
+                            <!-- Buttons -->
                             <tr>
                                 <td colspan="5" class="text-right">
                                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg border border-dark">

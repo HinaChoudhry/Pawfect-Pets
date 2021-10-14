@@ -2,76 +2,68 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid">
-<div class="row justify-content-center product-font">
-    <div class="col-12 ">
-      <h1 class="product-font mb-4 text-full text-center font-weight-bold">Blog</h1>
-        <hr >
+    <div class="row justify-content-center product-font">
+        <div class="col-12 ">
+            <h1 class="product-font mb-4 text-full text-center font-weight-bold">Blog</h1>
+            <hr >
+        </div>
     </div>
 </div>
-</div>
 
+<!-- Blog display section-->
 <div class="container product-font  justify-content-center checkout-bg-color ">
     <div class=>
         <div class=" rounded shadow-sm p-4 mb-4 review-bg-color">
             <div class=" pt-4 pb-4">
                 {% for blogpost in blogposts %}
                 <div class="row align-items-start review-detail mt-3">
-                    
                     <div class="col text-center">
-                    
-                    <h2><u>{{ blogpost.blog_title }}</u></h2><br>
-                    <h5>{{ blogpost.blog_intro }}</h5><br>
-                    <a href="{% url 'blog_detail' blogpost.id %}" >Read more</a>
-                        
-                    
+                        <h2><u>{{ blogpost.blog_title }}</u></h2><br>
+                        <h5>{{ blogpost.blog_intro }}</h5><br>
+                        <a href="{% url 'blog_detail' blogpost.id %}" >Read more</a>
                     </div>
                 </div>
            
+                <!-- Super User edit and delete blog post buttons -->
                 {% if request.user.is_superuser %}
-            <div class="text-center">
-                <a href="{% url 'edit_blog_post' blogpost.id  %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
-                <a class="btn btn-clear" href="{% url 'delete_blog_post' blogpost.id %}"><i class="fas fa-trash-alt"></i></a>
+                <div class="text-center">
+                    <a href="{% url 'edit_blog_post' blogpost.id  %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-clear" href="{% url 'delete_blog_post' blogpost.id %}"><i class="fas fa-trash-alt"></i></a>
+                </div>
+                <hr>
+                {% endif %}
+                {% endfor %}
             </div>
-            <hr>
-            {% endif %}
-           
-            
-            {% endfor %}
         </div>
-       
-        </div>
-       
     </div>
     &nbsp;
 
-{% if request.user.is_superuser %}
-<div class="row text-center justify-content-center product-font">
-    <div class="col-12 col-lg-6  review-form">
-        <h5 class="mb-4 review-write-detail font-weight-bold">Add a Post</h5>
-        <form method="POST" action="{% url 'add_blog_post'  %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="form-group">
-                
-                {{ form | crispy }}
-            </div>
-            <div class="">
-                <a class="btn btn-secondary rounded-0" href="#">Cancel</a>
-                <button class="btn btn-dark text-full rounded-0" type="submit"> Submit
-                </button>
-            </div>
-        </form>
+    <!-- Form for superuser to add a blog post -->
+    {% if request.user.is_superuser %}
+    <div class="row text-center justify-content-center product-font">
+        <div class="col-12 col-lg-6  review-form">
+            <h5 class="mb-4 review-write-detail font-weight-bold">Add a Post</h5>
+            <form method="POST" action="{% url 'add_blog_post'  %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form | crispy }}
+                </div>
+                <div>
+                    <a class="btn btn-secondary rounded-0" href="#">Cancel</a>
+                    <button class="btn btn-dark text-full rounded-0" type="submit"> Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
+    {% endif %}
 </div>
-
-{% endif %}
-</div>
-    {% endblock %}
+{% endblock %}
