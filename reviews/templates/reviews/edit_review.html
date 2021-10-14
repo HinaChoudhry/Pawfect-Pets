@@ -3,31 +3,31 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
+<!-- Edit Review Form -->
 <div class="container-fluid">
-<div class="row text-center justify-content-center product-font">
-    <div class="col-12 col-lg-6  review-form">
-        <h5 class="mb-4 review-write-detail">Edit your Review</h5>
-        <form method="POST" action="{% url 'edit_review'  review_id product_id %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="form-group">
-                
-                {{ form | crispy }}
-            </div>
-            <div class="form-group">
-                <a class="btn btn-secondary rounded-0" href="{% url 'products' %}">Cancel</a>
-                <input type="submit" />
-            </div>
-        </form>
+    <div class="row text-center justify-content-center product-font">
+        <div class="col-12 col-lg-6  review-form">
+            <h5 class="mb-4 review-write-detail">Edit your Review</h5>
+            <form method="POST" action="{% url 'edit_review'  review_id product_id %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    
+                    {{ form | crispy }}
+                </div>
+                <div class="form-group">
+                    <a class="btn btn-secondary rounded-0" href="{% url 'products' %}">Cancel</a>
+                    <input type="submit" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-</div>
 </div>
 {% endblock %}

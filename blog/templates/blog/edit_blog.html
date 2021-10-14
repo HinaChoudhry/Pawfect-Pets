@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 
@@ -17,17 +17,13 @@
         <form method="POST" action="{% url 'edit_blog_post' blogpost.id  %}" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
-                
-                {{ form | crispy }}
+               {{ form | crispy }}
             </div>
-            <div class="">
+            <div>
                 <a class="btn btn-secondary rounded-0" href="{% url 'blog' %}">Cancel</a>
-                <button class="btn btn-dark text-full rounded-0" type="submit"> Submit
-                </button>
+                <button class="btn btn-dark text-full rounded-0" type="submit">Submit</button>
             </div>
         </form>
     </div>
 </div>
-</div>
-
 {% endblock %}

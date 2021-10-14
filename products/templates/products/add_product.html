@@ -2,45 +2,43 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    
-    <div class="container product-font ">
-        <h1 class="product-font text-center mb-4"><strong>Product Management</strong></h1>
-        <hr>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6 justify-content-center">
-               <h4 class="text-center">Add a Product</h4>
-            </div>
-        </div>
-        &nbsp;
-        <div class="row product-font justify-content-center">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2 font-weight-bold" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-secondary rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-dark rounded-0" type="submit">Add Product</button>
-                    </div>
-                </form>
-            </div>
+<div class="container product-font ">
+    <h1 class="product-font text-center mb-4"><strong>Product Management</strong></h1>
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 justify-content-center">
+            <h4 class="text-center">Add a Product</h4>
         </div>
     </div>
-
-    
+    &nbsp;
+    <!-- Form for adding products-->
+    <div class="row product-font justify-content-center">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'add_product' %}" class="form mb-2 font-weight-bold" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.name != 'image' %}
+                        {{ field | as_crispy_field }}
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                {% endfor %}
+                <div class="text-right">
+                    <a class="btn btn-secondary rounded-0" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-dark rounded-0" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}

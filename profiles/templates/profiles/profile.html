@@ -3,28 +3,26 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
-
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
     
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="product-font text-center mb-4"><strong>My Profile</strong></h1>
-                <hr>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="product-font text-center mb-4"><strong>My Profile</strong></h1>
+            <hr>
         </div>
+    </div>
     
     <div class="row product-font">
         <div class="col-12 col-lg-4">
@@ -35,8 +33,9 @@
                 <button class="btn btn-dark rounded-0  float-right">Update Information</button>
             </form>
         </div>
+
         <!-- Order History table -->
-        <div class="col-12 col-lg-4  checkout-bg-color">
+        <div class="col-12 col-lg-4 checkout-bg-color">
             <p>Order History</p>
             <div class="order-history table-responsive ">
                 <table class="table table-sm table-borderless">
@@ -75,7 +74,6 @@
                     </tbody>
                 </table>
             </div>
-            
         </div>
 
         <!-- Reviews history table -->
@@ -95,21 +93,17 @@
                             <tr>
                                 <td>
                                     {{ review.date }}
-                                        
-                                 
                                 </td>
                                 <td>{{ review.title|truncatechars:10 }}</td>
-                                
                                 <td>{{ review.comment|truncatechars:20 }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
+        </div>
     </div>
-    
 </div>
-    </div>
 {% endblock %}
 
 {% block postloadjs %}

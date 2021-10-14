@@ -1,99 +1,83 @@
-   
-    <!-- Header -->
-    <div class="container-fluid">
+<!-- Header -->
+<div class="container-fluid">
     <div class="row justify-content-center product-font">
         <div class="col-12 ">
-            
             <h2 class="product-font mb-4 text-full text-center">Reviews</h2>
             <hr >
         </div>
     </div>
 </div>
 
-    <div class="container product-font checkout-bg-color ">
-        <div class=" ">
-            
-                <div class=" rounded shadow-sm p-4 mb-4 review-bg-color">
-                   
-                    <div class=" pt-4 pb-4">
-                        {% if reviews %}
-                        {% for review in reviews %}
-                                <div class="row align-items-start review-detail mt-3">
-                                   
-                                       
-                                  
-                                    <div class="col-12 col-lg-12 text-center ">
-                                        
-                                        <div class="text-full font-weight-bold">
-                                            <h4 class="font-weight-bold">{{ review.title }}</h4>
-                                        </div>
-                                        <div class="text-full font-weight-bold">
-                                            <p>{{ review.comment }}</p>
-                                        </div>
-                                        <h6 class="mb-1 text-full">{{ review.user }}</h6>
-                                        <p class="text-gray text-full ">{{ review.date }}</p>
-                                            {% if review.user == request.user.userprofile %}
-                                        <div>
-                                            <a href="{% url 'edit_review' review.id  product.id   %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
-                                            <button type="button" class="btn" data-toggle="modal" data-target="#delete-review-modal{{ forloop.counter }}"><i
-                                                class="fas fa-trash-alt"></i></button>
-                                        </div>
-                                            {% endif %}
-                                        <hr>
-                                    </div>
-                                </div>
+<!-- Reviews display section -->
+<div class="container product-font checkout-bg-color ">
+    <div>
+        <div class=" rounded shadow-sm p-4 mb-4 review-bg-color">
+            <div class=" pt-4 pb-4">
+                {% if reviews %}
+                {% for review in reviews %}
+                    <div class="row align-items-start review-detail mt-3">
+                        <div class="col-12 col-lg-12 text-center ">
+                            <div class="text-full font-weight-bold">
+                                <h4 class="font-weight-bold">{{ review.title }}</h4>
+                            </div>
+                            <div class="text-full font-weight-bold">
+                                <p>{{ review.comment }}</p>
+                            </div>
+                            <h6 class="mb-1 text-full">{{ review.user }}</h6>
+                            <p class="text-gray text-full ">{{ review.date }}</p>
+                            {% if review.user == request.user.userprofile %}
+                            <div>
+                                <a href="{% url 'edit_review' review.id  product.id   %}" class="btn btn-clear"><i class="fas fa-edit"></i></a>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#delete-review-modal{{ forloop.counter }}"><i
+                                class="fas fa-trash-alt"></i></button>
+                            </div>
+                            {% endif %}
+                            <hr>
+                        </div>
+                    </div>
                                
 
-                                <!-- Modal -->
-                                <div class="modal fade text-center" id="delete-review-modal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="deleteLabel-{{ comment.id }}" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                      <div class="modal-content">
-                                        <div class="modal-header">
-                                          <h5 class="modal-title text-center justify-content-center" id="deleteLabel">Delete Review?</h5>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                          </button>
-                                        </div>
-                                        <div class="modal-body">
-                                          <p>Are you sure you want to delete your review?</p>
-                                          <p>This cannot be undone!</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                          <a class="btn btn-dark" href="{% url 'delete_review' review.id product.id %}">Delete</a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-
-
-
-                        {% endfor %}
-                    {% else %}
-                        <p>There are currently no reviews for this product</p>
-                    {% endif %}
-                
+                    <!-- Modal -->
+                    <div class="modal fade text-center" id="delete-review-modal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="deleteLabel-{{ comment.id }}" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center justify-content-center" id="deleteLabel">Delete Review?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to delete your review?</p>
+                                <p>This cannot be undone!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <a class="btn btn-dark" href="{% url 'delete_review' review.id product.id %}">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>There are currently no reviews for this product</p>
+                {% endif %}
             </div>
         </div>
     </div>
 
-
-
-    
+    <!-- Review Form -->
     <div class="row text-center justify-content-center product-font">
         <div class="col-12 col-lg-6  review-form">
             <h5 class="mb-4 review-write-detail font-weight-bold">Leave a Review</h5>
             <form method="POST" action="{% url 'add_review' product.id %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
-                    
-                    {{ form | crispy }}
+                   {{ form | crispy }}
                 </div>
                 <div class="form-group">
                     <a class="btn btn-secondary rounded-0" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-dark text-full rounded-0" type="submit"> Submit
-                    </button>
+                    <button class="btn btn-dark text-full rounded-0" type="submit"> Submit</button>
                 </div>
             </form>
         </div>
