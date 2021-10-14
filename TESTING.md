@@ -285,10 +285,11 @@ The website was again responsive on Microsoft Edge with no bugs found.
     * Had to update  the url link to 'comment.id' rather than 'blogcomment.id'
 
 - The 'Free Delivery' Banner was overflowing from the right side of the viewport
-    * Resolved by adding a 'container-fluid' div to the row and col
+    * Resolved by adding a 'container-fluid' class div to the row and col
 
 - The Blog and Blog Detail pages width was overflowing to the right side of the viewport
-    * Resolved by adding a 'container-fluid' div to the Blog row and col divs and to the Comments section in the Blog Detail template. 
+    * Resolved by adding a 'container-fluid' class div to the Blog row and col divs and to the Comments section in the Blog Detail template. 
 
-
+- The add_review and edit_review templates were overflowing the viewport as well on the right side. 
+    * The class 'container-fluid' was added in an extra div to resolve this. 
 ## Unresolved bugs

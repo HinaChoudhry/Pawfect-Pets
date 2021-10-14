@@ -52,6 +52,12 @@ ul {
     }
 
 
+    @media (max-width: 900px) {
+        .header-container {
+            padding-top: 25px;
+        }
+    }
+
     @media (max-width: 600px) {
         .header-container {
             padding-top: 50px;
