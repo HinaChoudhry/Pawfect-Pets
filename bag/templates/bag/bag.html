@@ -3,15 +3,15 @@
 {% load bag_tools %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
+<div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
             <div class="col">
@@ -82,6 +82,7 @@
                                         <a class="update-link text-info update-link"><small>Update</small></a>
                                         <a class="remove-item text-danger float-right remove-link" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
+
                                     <!-- Amount details -->
                                     <td class="py-3">
                                         <h5 class="my-0 product-font font-weight-bold">£{{ item.product.price | calc_subtotal:item.quantity }}</h5>
@@ -100,6 +101,7 @@
                                     {% endif %}
                                 </td>
                             </tr>
+
                             <!-- Buttons -->
                             <tr>
                                 <td colspan="5" class="text-right">
@@ -120,6 +122,7 @@
                         </table>
                     </div>
                 {% else %}
+                
                 <div class="text-center">
                     <p class="lead mb-5 product-font">Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg  border-dark">

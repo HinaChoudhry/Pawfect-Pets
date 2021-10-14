@@ -4,7 +4,7 @@
 - [W3C Mark-up Validation](https://validator.w3.org/) was used for checking for validity of html. 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. 
 - [JSHint](https://jshint.com/) was used to check for validity of the JavaScript. 
-- [Pep8 Online](http://pep8online.com/) was used to check for errors in Python. 
+- For Python code, I used the in-built Gitpod linter to validate code. 
 
 ## User Story Tests
 

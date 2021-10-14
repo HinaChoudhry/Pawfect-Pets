@@ -2,30 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
 
-html {
+html{
     height: 100%;
 }
 
-.hero-img {
+.hero-img{
     background: url("/media/home_bg.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-   
 }
        
 
 
-.margin-index { 
+.margin-index{ 
     margin-bottom: 20%;
 }
 
-ul {
+ul{
     margin-bottom: 0px;
 }
 
 /*** from Bulma ***/
-.icon {
+.icon{
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -35,14 +34,14 @@ ul {
 
 /*** Slightly larger container on xl screens ***/
 @media (min-width: 1200px) {
-    .container {
+    .container{
       max-width: 80%;
     }
   }
   
   /*** fixed top navbar only on medium and up ***/
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
+  @media (min-width: 992px){
+      .fixed-top-desktop-only{
           position: fixed;
           top: 0;
           right: 0;
@@ -53,138 +52,128 @@ ul {
 
 /*** Media queries for header container sizing ***/ 
 
-    @media (max-width: 900px) {
-        .header-container {
-            padding-top: 25px;
-        }
+@media (max-width: 900px){
+    .header-container{
+        padding-top: 25px;
     }
+}
 
-    @media (max-width: 600px) {
-        .header-container {
-            padding-top: 50px;
-        }
-      }
+@media (max-width: 600px){
+    .header-container{
+        padding-top: 50px;
+    }
+}
 
+@media (max-width: 400px){
+    .header-container{
+        padding-top: 100px;
+    }
+}
 
-      @media (max-width: 400px) {
-        .header-container {
-            padding-top: 100px;
-        }
-      }
+@media (max-width: 320px){
+    .header-container {
+        padding-top: 150px;
+    }
+}
 
-
-      @media (max-width: 320px) {
-        .header-container {
-            padding-top: 150px;
-        }
-      }
-
- .nav-bg-color {
-          background-color: #88daf3;
-      }
+.nav-bg-color{
+    background-color: #88daf3;
+}
 
 /*** Fonts ***/ 
     
-.logo-font {
+.logo-font{
     font-family: DM Serif Text;
     text-shadow: 2px 2px #000;
 }
 
-.nav-font {
+.nav-font{
     font-family: Quicksand;
     text-shadow: 2px 2px #000;
     font-size: 1.2em;
 }
 
-.subtitle-font {
+.subtitle-font{
     font-family: Quicksand;
     color: #fff;
     font-size: 2em;
     font-weight: 700;
 }
 
-.subtitle-font:hover {
+.subtitle-font:hover{
     color: #000;
 }
-.index-font {
+
+.index-font{
     Font-family: Quicksand;
     font-size: 4rem;
-
 }
     
-    .dropdown-font {
-        font-family: Quicksand;
-        font-weight: 700;
-        font-size: 1.5vw;
-    }
+.dropdown-font{
+    font-family: Quicksand;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
 
+.list-font{
+    font-family: Quicksand;
+    font-size: 1.2vw;
+}
 
-    .list-font {
-        font-family: Quicksand;
-        font-size: 1.2vw;
-    }
-
-
-    .dropdown-font {
-        font-family: Quicksand;
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
+.dropdown-font{
+    font-family: Quicksand;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
     
-    .heading-font {
-        font-family: Quicksand;
-        font-weight: 500;
-    }
+.heading-font{
+    font-family: Quicksand;
+    font-weight: 500;
+}
   
-    .product-font {
-        font-family: Quicksand;
-        Font-weight: 500;
-        
-    }
+.product-font{
+    font-family: Quicksand;
+    Font-weight: 500;
+}
 
 /*** Media Queries for different font sizing on different viewports ***/
 
-
-  @media (max-width: 600px) {
-      .index-font {
-          font-size: 2rem;
-          margin-top: 20px;
-      }
+@media (max-width: 600px){
+    .index-font{
+        font-size: 2rem;
+        margin-top: 20px;
     }
-
-
-    @media (max-width: 400px) {
-      .index-font {
-            font-size: 1.5rem;
-            margin-top: 35px;
-      }
-    }
-
-
-    @media (max-width: 320px) {
-      .index-font{
-          font-size: 1rem;
-          margin-top: 30px;
-      }
-    }
-
-
-
-/*** Navbar ***/
-
-.navbar-padding {
-    padding: 0rem;
 }
 
 
+@media (max-width: 400px){
+    .index-font{
+        font-size: 1.5rem;
+        margin-top: 35px;
+    }
+}
 
-.navbar {
+
+@media (max-width: 320px){
+    .index-font{
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+}
+
+/*** Navbar ***/
+
+.navbar-padding{
+    padding: 0rem;
+}
+
+.navbar{
     position: absolute;
     z-index: 1;
     background-color: #88daf3;
 }
 
-.con .btn {
+.con .btn{
     position: absolute;
     top: 85%;
     left: 50%;
@@ -198,46 +187,46 @@ ul {
     font-weight: 700;
   }
 
-.btn:hover {
+.btn:hover{
     opacity: 0.7;
 }
 
-  .header-container {
-      margin-bottom: 5%;
-  }
+.header-container{
+    margin-bottom: 5%;
+}
 
-  /*** Footer ***/
+/*** Footer ***/
  
-  .footer-style {
-      background-color: #88daf3;
-      font-family: Quicksand;
-      padding-top: 20px;
-  }
+.footer-style{
+    background-color: #88daf3;
+    font-family: Quicksand;
+    padding-top: 20px;
+}
 
-  .fa-footer {
-      color: #000;
-      justify-content: center;
-  }
+.fa-footer{
+    color: #000;
+    justify-content: center;
+}
 
-  .fa-footer:hover {
-      color:#000;
-      opacity: 0.7;
-  }
+.fa-footer:hover{
+    color:#000;
+    opacity: 0.7;
+}
   
-  .img-border {
-      border: solid 1px rgba(87, 85, 85, 0.411);
-      border-radius: 10px;
-  }
+.img-border{
+    border: solid 1px rgba(87, 85, 85, 0.411);
+    border-radius: 10px;
+}
 
   
 
-  .btt-link,
-  .update-link,
-  .remove-link {
-      cursor: pointer;
-  }
+.btt-link,
+.update-link,
+.remove-link{
+    cursor: pointer;
+}
 
-  .btt-button {
+.btt-button{
     height: 42px;
     width: 42px;
     position: fixed;
@@ -245,7 +234,7 @@ ul {
     right: 10px;
 }
 
-.banner {
+.banner{
     background-color: #000;
     font-family: Quicksand;
 }
@@ -253,18 +242,18 @@ ul {
 
 /***  bootstrap toasts ***/
 
-.message-container {
+.message-container{
     position: fixed;
     top: 82px;
     right: 15px;
     z-index: 99999999999;
 }
 
-.custom-toast {
+.custom-toast{
     overflow: visible;
 }
 
-.toast-capper {
+.toast-capper{
     height: 2px;
 }
 
@@ -273,7 +262,7 @@ body{
     width: 100%;
 }
 
-.arrow-up {
+.arrow-up{
     width: 0; 
     height: 0; 
     border-left: 4px solid transparent;
@@ -285,62 +274,61 @@ body{
 }
 
 /*** Convenience classes - colors copied from Bootstrap ***/
-.arrow-primary {
+.arrow-primary{
     border-bottom-color: #007bff !important;
 }
 
-.arrow-secondary {
+.arrow-secondary{
     border-bottom-color: #6c757d !important;
 }
 
-.arrow-success {
+.arrow-success{
     border-bottom-color: #28a745 !important;
 }
 
-.arrow-danger {
+.arrow-danger{
     border-bottom-color: #dc3545 !important;
 }
 
-.arrow-warning {
+.arrow-warning{
     border-bottom-color: #ffc107 !important;
 }
 
-.arrow-info {
+.arrow-info{
     border-bottom-color: #17a2b8 !important;
 }
 
-.arrow-light {
+.arrow-light{
     border-bottom-color: #f8f9fa !important;
 }
 
-.arrow-dark {
+.arrow-dark{
     border-bottom-color: #343a40 !important;
 }
 
-.bag-notification-wrapper {
+.bag-notification-wrapper{
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-.bg-black {
+.bg-black{
     background-color: #000;
 }
 
-.jum-bg-color {
+.jum-bg-color{
     background-color: #d9f3f57e;
     margin-top: 100px;
 }
 
-
 /*** Product form ***/
 
-.btn-file {
+.btn-file{
     position: relative;
     overflow: hidden;
 }
 
-.btn-file input[type="file"] {
+.btn-file input[type="file"]{
     position: absolute;
     top: 0;
     right: 0;
@@ -348,26 +336,25 @@ body{
     min-height: 100%;
     opacity: 0;
     cursor: pointer;
-
 }
 
 
-.custom-checkbox .custom-control-label::before {
+.custom-checkbox .custom-control-label::before{
     border-radius: 0;
     border-color: #dc3545;
 }
 
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
 }
 
-.review-bg-color {
+.review-bg-color{
     background-color: #d9f3f57e;
 }
 
-.delete-btn-padding {
+.delete-btn-padding{
     padding: 0px;
     font-size: 0.85rem;
 }

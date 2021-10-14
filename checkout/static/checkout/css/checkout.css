@@ -1,10 +1,10 @@
-.checkout-bg-color {
-    background-color: #d9f3f57e;
-    border-radius: 10px;
+.checkout-bg-color{
+  background-color: #d9f3f57e;
+  border-radius: 10px;
 }
 
 .StripeElement,
-.stripe-style-input {
+.stripe-style-input{
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
@@ -18,35 +18,35 @@
 
 .StripeElement--focus,
 .stripe-style-input:focus,
-.stripe-style-input:active {
+.stripe-style-input:active{
   box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
-.StripeElement--webkit-autofill {
+.StripeElement--webkit-autofill{
   background-color: #fefde5 !important;
 }
 
-.stripe-style-input::placeholder {
-    color: #aab7c4;
+.stripe-style-input::placeholder{
+  color: #aab7c4;
 }
 
-.fieldset-label {
-    position: relative;
-    right: .5rem;
+.fieldset-label{
+  position: relative;
+  right: .5rem;
 }
 
 #payment-form .form-control,
-#card-element {
-    color: #000;
-    border: 1px solid rgba(87, 85, 85, 0.411);
+#card-element{
+  color: #000;
+  border: 1px solid rgba(87, 85, 85, 0.411);
 }
 
-.img-border {
+.img-border{
   border: solid 1px rgba(87, 85, 85, 0.411);
   border-radius: 10px;
 }
 
-#loading-overlay {
+#loading-overlay{
 	display: none;
 	position: fixed;
     top: 0;
@@ -57,7 +57,7 @@
     z-index: 9999;
 }
 
-.loading-spinner {
+.loading-spinner{
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +66,7 @@
 }
 
 
-select, select option {
+select, select option{
   color: #000;
   }
 
