@@ -39,7 +39,7 @@
                 {% if request.user.is_superuser %}
                     <small>
                         <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                        <button type="button" class="btn text-danger " data-toggle="modal" data-target="#delete-product-detail-modal{{ forloop.counter }}">Delete</button>
+                        <button type="button" class="btn text-danger delete-btn-padding" data-toggle="modal" data-target="#delete-product-detail-modal{{ forloop.counter }}">Delete</button>
                       </small>
                 {% endif %}
                 

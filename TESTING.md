@@ -293,3 +293,4 @@ The website was again responsive on Microsoft Edge with no bugs found.
 - The add_review and edit_review templates were overflowing the viewport as well on the right side. 
     * The class 'container-fluid' was added in an extra div to resolve this. 
 ## Unresolved bugs
+- When trying to add a product via the Product Management tab, uploading a product without an image results in an error. However, if you navigate and search for the product just uploaded it displays with the 'no image' image and everything has uploaded correctly. 

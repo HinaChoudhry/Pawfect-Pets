@@ -24,7 +24,7 @@ ul {
     margin-bottom: 0px;
 }
 
-/* from Bulma */
+/*** from Bulma ***/
 .icon {
     align-items: center;
     display: inline-flex;
@@ -33,14 +33,14 @@ ul {
     width: 1.5rem;
 }
 
-/* Slightly larger container on xl screens */
+/*** Slightly larger container on xl screens ***/
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
     }
   }
   
-  /* fixed top navbar only on medium and up */
+  /*** fixed top navbar only on medium and up ***/
   @media (min-width: 992px) {
       .fixed-top-desktop-only {
           position: fixed;
@@ -51,6 +51,7 @@ ul {
       }
     }
 
+/*** Media queries for header container sizing ***/ 
 
     @media (max-width: 900px) {
         .header-container {
@@ -82,6 +83,8 @@ ul {
           background-color: #88daf3;
       }
 
+/*** Fonts ***/ 
+    
 .logo-font {
     font-family: DM Serif Text;
     text-shadow: 2px 2px #000;
@@ -106,8 +109,42 @@ ul {
 .index-font {
     Font-family: Quicksand;
     font-size: 4rem;
-    
+
 }
+    
+    .dropdown-font {
+        font-family: Quicksand;
+        font-weight: 700;
+        font-size: 1.5vw;
+    }
+
+
+    .list-font {
+        font-family: Quicksand;
+        font-size: 1.2vw;
+    }
+
+
+    .dropdown-font {
+        font-family: Quicksand;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+    .heading-font {
+        font-family: Quicksand;
+        font-weight: 500;
+    }
+  
+    .product-font {
+        font-family: Quicksand;
+        Font-weight: 500;
+        
+    }
+
+/*** Media Queries for different font sizing on different viewports ***/
+
+
   @media (max-width: 600px) {
       .index-font {
           font-size: 2rem;
@@ -132,20 +169,14 @@ ul {
     }
 
 
-.dropdown-font {
-    font-family: Quicksand;
-    font-weight: 700;
-    font-size: 1.5vw;
-}
+
+/*** Navbar ***/
 
 .navbar-padding {
     padding: 0rem;
 }
 
-.list-font {
-    font-family: Quicksand;
-    font-size: 1.2vw;
-}
+
 
 .navbar {
     position: absolute;
@@ -175,12 +206,8 @@ ul {
       margin-bottom: 5%;
   }
 
-  .dropdown-font {
-      font-family: Quicksand;
-      font-size: 1.2rem;
-      font-weight: 500;
-  }
-
+  /*** Footer ***/
+ 
   .footer-style {
       background-color: #88daf3;
       font-family: Quicksand;
@@ -202,16 +229,7 @@ ul {
       border-radius: 10px;
   }
 
-  .heading-font {
-      font-family: Quicksand;
-      font-weight: 500;
-  }
-
-  .product-font {
-      font-family: Quicksand;
-      Font-weight: 500;
-      
-  }
+  
 
   .btt-link,
   .update-link,
@@ -233,7 +251,7 @@ ul {
 }
 
 
-/* ------------------------------- bootstrap toasts */
+/***  bootstrap toasts ***/
 
 .message-container {
     position: fixed;
@@ -266,7 +284,7 @@ body{
     right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
+/*** Convenience classes - colors copied from Bootstrap ***/
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -315,7 +333,7 @@ body{
 }
 
 
-/* Product form */
+/*** Product form ***/
 
 .btn-file {
     position: relative;
@@ -349,3 +367,7 @@ body{
     background-color: #d9f3f57e;
 }
 
+.delete-btn-padding {
+    padding: 0px;
+    font-size: 0.85rem;
+}
