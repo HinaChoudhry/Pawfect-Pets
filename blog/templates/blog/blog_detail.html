@@ -67,11 +67,11 @@
                     <hr>
 
                     <!-- Modal -->
-                    <div class="modal fade text-center" id="delete-modal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="deleteLabel-{{ comment.id }}" aria-hidden="true">
+                    <div class="modal fade text-center" id="delete-modal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="deleteLabel-{{ forloop.counter }}" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h5 class="modal-title text-center justify-content-center" id="deleteLabel">Delete Comment?</h5>
+                                <h5 class="modal-title text-center justify-content-center" id="deleteLabel-{{ forloop.counter }}">Delete Comment?</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 <!-- Add a comment -->
 <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5 product-font">
