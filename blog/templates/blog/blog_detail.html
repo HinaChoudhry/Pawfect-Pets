@@ -50,7 +50,7 @@
                     <h4 class="font-weight-bold mb-3 ms-3 ">Comments</h4>
                     <hr>
                 </div>
-                <div class="">
+                <div>
                     {% if comments %}
                     {% for comment in comments %}
                     <p>{{ comment.comment }}</p>
@@ -87,17 +87,18 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                    {% endfor %} </div>
+            
             </div>  
             {% else %}
             <div>
                 <h4 class=" mb-3 ms-3">No Comments to show</h4>
                 <hr>
                 {% endif %}
-            </div>
+            </div> 
         </div>
     </div>
+    
 
 
 <!-- Add a comment -->
