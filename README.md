@@ -4,36 +4,10 @@ My fourth and final milestone project is for Pawfect Pets, a full stack e-commer
 [Pawfect Pets](https://pawfect-pets.herokuapp.com/) 
 Please note that the card payment details for Stripe should be entered as 4242 recurring as otherwise, it will show as invalid card details. 
 
-
-# Table of contents
-
-1. [UX](#ux)
-
-    * [User Stories](#user-stories)
-    * [Wireframes](#wireframes)
-    * [Design](#design)
-    * [Font](#font)
-    * [Colours](#colours)
-
-2. [Features](#features)
-
-3. [Database](#database)
-
-4. [Testing](#testing)
-
-5. [Technology used](#technology-used)
-
-6. [Deployment](#deployment)
-
-7. [Credits](#credits)
-
-8. [Disclaimer](#disclaimer)
-    
-
-## UX <a name=”ux”></a>
+## UX 
 The website is for pet lovers who want to buy toys for their pets. The site caters to dogs, cats and small animals currently with appropriate toys. The overall layout chosen was to attract users to the website without it looking too busy and without there being too much for the user to look at, at one time. 
 
-### User Stories <a name=”user-stories”></a>
+### User Stories 
 
 As a user 
 - I want to be able to search for products
@@ -65,7 +39,7 @@ As an admin
 - I want to be able to edit blog posts
 - I want to be able to delete blog posts
 
-### Wireframes <a name=”wireframes”></a>
+### Wireframes 
 
 The Balsamiq programme was used to create my wireframes for my project. Building the wireframes before starting to build my project allowed me to plan what I was aiming to make and also allowed me to discuss the layout of the website with my mentor in advance. 
 
@@ -110,17 +84,17 @@ Mobile Wireframes
 - [User Profile](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/mobile/User%20Profile%20Mobile.png)
 
 
-### Design <a name=”design”></a>
+### Design 
 For my third milestone project, I received some constructive criticism that there was too much going on visually with the website and that it was a bit much and so for this project, I decided to go with a simplistic theme, somewhat similar to that of my first milestone project. Instead of adding images as wallpapers, I added smaller, individual pictures to different pages with a white background so that these pictures would add some colour to the pages, rather than adding loud backgrounds. I also wanted to add a touch of playfulness to the site to mirror the playful nature of animals, done so with the use of animal imagery. 
 
 
-### Font <a name=”font”></a>
+### Font 
 I used Google Fonts for my project and have used DM Serif Text for the navbar logo text while the rest of the website uses Quicksand. Again, from my third milestone project I was advised to not use overly-cursive fonts as they made reading some of the text difficult. I chose Quicksand as the main font used throughout the site as I felt it was a readable, yet playful text and brought the element of simplicity to the fonts. This was paired with Dm Serif Text for the main nav logo text as I felt it was bold and immediately drew the user to the text, therefore indicating what the website is about. 
 
-### Colors <a name=”colors”></a>
+### Colors 
 The colours of the website were chosen in order to keep the design simple, yet attractive. From looking at different e-commerce websites, I noticed that many used a palette of white and black with one more colour and so I decided to do something similar. For my palette, I went for #000, #FFF, #88daf3 and #d9f3f57e; which is black, white, bright blue and a calm blue. Initially, I went with green instead of blue but it resembled the Pets At Home website too much so I changed this for the blue. 
 
-## Features <a name=”features”></a>
+## Features 
 ### Existing Features
 
 ### Homepage
@@ -166,11 +140,11 @@ The Blog page gives a taster of what blogs are available for users to read, with
 
 The blog detail page is where users can read blog posts in full as well as leave comments. The Blog Detail page includes a related image to the blog post, a title, author, date posted and text sections. Logged in users can also leave comments here on the blog post. 
 
-## Database schema  <a name=”database”></a>
+## Database schema  
 ![db schema](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/database/database%20schema.png)
 
 
-## Technologies Used  <a name=”technology-used”></a>
+## Technologies Used 
 - [HTML](https://en.wikipedia.org/wiki/HTML) To enable the basic building on the website.
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) for styling the website 
 - [JavaScript](https://www.javascript.com/) for the interactivity  
@@ -195,11 +169,10 @@ The blog detail page is where users can read blog posts in full as well as leave
 
 
 
-## Testing  <a name=”testing”></a>
+## Testing  
 Testing information can be found at [TESTING.md]( https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/TESTING.md).
 
-## Deployment  <a name=”deployment”></a>
-
+## Deployment  
 
 ### Deployment to Heroku
 
@@ -218,9 +191,9 @@ To deploy the website to Heroku the following steps were taken.
     * Install dj_database_url and psycopg2 in GitPod using the command ‘pip install’ 
     * Add the dependencies to the requirements file by typing in ‘pip3 freeze > requirements.txt’
     * Import dj_database_url in the settings.py 
-* Comment out the current database settings and replace with the postgres database (this is an environmental variable and should not be shown in version control).
-    *Next, in order to migrate the models to the new database use the command – ‘python manage.py migrate’
-* Set up a superuser using the command – “python3 manage.py createsuperuser”
+    * Comment out the current database settings and replace with the postgres database (this is an environmental variable and should not be shown in version control).
+* Next, in order to migrate the models to the new database use the command – ‘python manage.py migrate’
+    * Set up a superuser using the command – “python3 manage.py createsuperuser”
     * Commit the changes making sure not to include the environmental variables in version control. 
     * Then, I created an if-else statement in the settings.py to use Postgres if the DATABASE_URL variable is available and otherwise use the default database in gitpod.
     ```
@@ -267,11 +240,11 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
 * Create an AWS Account and/or sign in
     * To create a bucket search for the aws s3 service
     * Click on ‘create bucket’
-* Name the bucket and select your region, unchecking ‘block public access’ and also acknowledge the bucket will be public. 
+    * Name the bucket and select your region, unchecking ‘block public access’ and also acknowledge the bucket will be public. 
     * click create bucket.
         * Amend the Bucket settings as such - 
-        * Go to the bucket Properties section and turn on static web hosting
-        * In the index and error text inputs add index.html and error.html, then click ‘save’.  
+            * Go to the bucket Properties section and turn on static web hosting
+            * In the index and error text inputs add index.html and error.html, then click ‘save’.  
                 
 * Next, go to the bucket Permissions section.
 * In the cors config paste in the below:
@@ -301,7 +274,7 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
     * click “add statement” then the “generate policy button”
 * Copy and paste the new policy into your bucket policy, adding /* to the end of the resources key and click ‘save’. 
                   
-    * Go to the Access Control List section.
+* Go to the Access Control List section.
     * Set list objects permission to “everyone.”
 	* On the admin page for AWS, search “IAM” to add a new user
 	* Create a new group by clicking “new group” and give it a name
@@ -342,31 +315,28 @@ USE_AWS, an environmental variable needs to be set up to run code on Heroku. The
         MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 ```
-* Back in heroku click on settings tab and then click reveal config vars.
+* Back in Heroku click on settings tab and then click reveal config vars.
 * Then set up the environmental variables as required.
 * Back in the IDE, we need to create a custom storages.py to tell django that in production we want to use Amazon S3 to store our static and media files
 * import S3Boto3Storage at the top of the custom_storages.py file.
 * Set up classes to tell django where to store the files as shown below:
-    * ```
+ ```
                 class StaticStorage(S3Boto3Storage):
                     location = settings.STATICFILES_LOCATION
                 
                 class MediaStorage(S3Boto3Storage):
                     location = settings.MEDIAFILES_LOCATION
-              ```
-    * push all the changes to Github 
-    
-    * Add Media files to AWS
-        * in your AWS bucket, create a new folder called media
-        * select “upload” and upload your image files, then select “grand public access”. 
+```
+* push all the changes to Github 
+* Add Media files to AWS
+    * in your AWS bucket, create a new folder called media
+    * select “upload” and upload your image files, then select “grand public access”. 
 	* Next, click “upload”       
 
  
-
 ### Setting the project up locally
 
 * Find your github repository and on the dropdown menu click “Download zip”, then extract the files to your repository. 
-            
 * Open your IDE and open the folder containing the code and download the requirements needed to run the project with the command -` pip3 install -r requirements.txt `
 * Next, set up the below environmental variables - 
     ``` DJANGO_SECRET_KEY = *YOUR SECRET KEY*
@@ -391,10 +361,7 @@ USE_AWS, an environmental variable needs to be set up to run code on Heroku. The
     * enter your own username and password
     * Run the app if you now like with the command “python3 manage.py runserver”. 
 
-
-
-
-## Credits  <a name=”credits”></a>
+## Credits  
 ### Images
 The images used for this website were obtained from [Shutterstock](www.shutterstock.com) and  [Unsplash](www.unsplash.com) except for the product images. These were obtained from [Amazon](amazon.co.uk)
 ### Content 
@@ -405,7 +372,7 @@ This website was made following the Code Institute Boutique Ado tutorial videos 
 
 
 ### Acknowledgements
-I would like to thank my mentor, Precious Ijege, for his time, advise and comments in working with me to build my project. As this is my final project with Code Institute, I would like to further thank Precious for his guidance and mentorship throughout the whole course and for helping me get to a stage where I have submitted all four milestone projects. 
- I would like to thank the Code Institute Slack forum for all their help and in particular the #peer-review-code channel for the input for my project and the #full-stacks-framework channel for helping with bugs and general advice. I would also like to thank the tutors at Code Institute for their help, guidance, advice, time and patience throughout the whole course.  
-## Disclaimer  <a name=”disclaimer”></a>
+I would like to thank my mentor, [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), for his time, advice and comments in working with me to build my project. As this is my final project with Code Institute, I would like to further thank Precious for his guidance and mentorship throughout the whole course and for helping me get to a stage where I have submitted all four milestone projects. 
+I would like to thank the Code Institute Slack forum for all their help and in particular the #peer-review-code channel for the input for my project and the #full-stacks-framework channel for helping with bugs and general advice. I would also like to thank the tutors at Code Institute for their help, guidance, advice, time and patience throughout the whole course.  
+## Disclaimer 
 The content and images on this website are for educational purposes only.
