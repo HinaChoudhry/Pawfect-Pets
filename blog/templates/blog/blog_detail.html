@@ -104,12 +104,12 @@
 <!-- Add a comment -->
 <div class="col-12 col-lg-8 offset-lg-2 mt-2 mb-5 product-font">
     <h5 class="mb-4 review-write-detail font-weight-bold">Add a Comment</h5>
-    <form method="POST" action="{% url 'add_blog_comment'  blogpost.id %}" enctype="multipart/form-data">
+    <form method="POST" action="{% url 'add_blog_comment'  blogpost.id %}" enctype="multipart/form-data" id="blogcomment" onsubmit="return validateForm()">
         {% csrf_token %}
         <div class="form-group">
             {{ form | crispy }}
         </div>
-        <div class="">
+        <div>
             <a class="btn btn-secondary rounded-0" href="#">Cancel</a>
             <button class="btn btn-dark text-full rounded-0" type="submit"> Submit</button>
         </div>
