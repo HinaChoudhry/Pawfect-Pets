@@ -21,7 +21,6 @@ def blog(request):
 
 def blog_detail(request, blogpost_id):
     blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
-    print("ADDED BY JO: BLOGPOST ON LINE 24")
     form = BlogCommentForm()
     comments = BlogComment.objects.filter(blogpost=blogpost)
 
@@ -116,7 +115,6 @@ def add_blog_comment(request, blogpost_id):
     """ Add a blog comment """
 
     blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
-    print("ADDED BY JO: BLOGPOST ON LINE 119: ", blogpost)
     if request.method == 'POST':
         form = BlogCommentForm(request.POST, request.FILES)
         if form.is_valid():
@@ -138,8 +136,7 @@ def add_blog_comment(request, blogpost_id):
         'blogpost': blogpost,
         'form': form,
     }
-    print(print("ADDED BY JO: CONTEXT ON LINE 136", context))
-
+    
     return render(request, template, context)
 
 
