@@ -136,7 +136,7 @@ def add_blog_comment(request, blogpost_id):
         'blogpost': blogpost,
         'form': form,
     }
-    
+
     return render(request, template, context)
 
 
