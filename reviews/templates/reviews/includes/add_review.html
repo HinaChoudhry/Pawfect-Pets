@@ -1,3 +1,6 @@
+{% load static %}
+
+{% block content %}
 <!-- Header -->
 <div class="container-fluid">
     <div class="row justify-content-center product-font">
@@ -70,7 +73,7 @@
     <div class="row text-center justify-content-center product-font">
         <div class="col-12 col-lg-6  review-form">
             <h5 class="mb-4 review-write-detail font-weight-bold">Leave a Review</h5>
-            <form method="POST" action="{% url 'add_review' product.id %}" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'add_review' product.id %}" enctype="multipart/form-data" id="reviewcomment">
                 {% csrf_token %}
                 <div class="form-group">
                    {{ form | crispy }}
@@ -84,3 +87,9 @@
     </div>
 </div>
 
+{% endblock %} 
+
+{% block postloadjs %}
+{{ blocksuper }}
+<script src="{% static 'reviews/js/reviews.js' %}"></script>
+{% endblock %}

@@ -1,3 +1,6 @@
+// Targets alphanumeric characters and if the length of the string is greater 0, 
+// exluding non-alphanumeric, the form is submitted. 
+
 let form = document.getElementById("blogcomment");
 
 let comment = document.getElementById("comment");
@@ -12,7 +15,7 @@ if (comment.length > 0) {
     form.submit() 
   }
   else {
-  alert("Alphanumeric inputs are only allowed");
+  alert("Only Alphanumeric inputs are allowed");
     
     }
   }
