@@ -52,7 +52,7 @@
     <div class="row text-center justify-content-center product-font">
         <div class="col-12 col-lg-6  review-form">
             <h5 class="mb-4 review-write-detail font-weight-bold">Add a Post</h5>
-            <form method="POST" action="{% url 'add_blog_post'  %}" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'add_blog_post'  %}" enctype="multipart/form-data" id="blogcomment">
                 {% csrf_token %}
                 <div class="form-group">
                     {{ form | crispy }}
@@ -66,4 +66,10 @@
     </div>
     {% endif %}
 </div>
+{% endblock %}
+
+
+{% block postloadjs %}
+{{ block.super }}
+<script src="{% static 'blog/js/blog.js' %}"></script>
 {% endblock %}
