@@ -1,8 +1,8 @@
 # Milestone Project 4 – Pawfect Pets
 
 My fourth and final milestone project is for Pawfect Pets, a full stack e-commerce website for pet toys. It contains a homepage, products page, product detail page, shopping bag, checkout page, user profile page and a blog page. This is a full stack e-commerce website using HTML, CSS, JavaScript, Python and the Django Framework. The aim of the website is to sell products to potential customers and have them regularly use the site as a means of buying pet toys for their pets. 
-[Pawfect Pets](https://pawfect-pets.herokuapp.com/) 
 Please note that the card payment details for Stripe should be entered as 4242 recurring as otherwise, it will show as invalid card details. 
+[Pawfect Pets](https://pawfect-pets.herokuapp.com/)
 
 ## UX 
 The website is for pet lovers who want to buy toys for their pets. The site caters to dogs, cats and small animals currently with appropriate toys. The overall layout chosen was to attract users to the website without it looking too busy and without there being too much for the user to look at, at one time. 
@@ -26,7 +26,6 @@ As a user
 - I want to be able to view all of the items in my shopping bag before proceeding to the checkout
 - I want to be able to sort products by category, A-Z, price and by name
 - I want to be able to view blog posts on the website
-- I want a FAQ section to see information about the website
 - I want to be able to read a blog
 - I want to be able to comment on the blog
 - I want to be able to edit/delete my comments on the blog
@@ -99,13 +98,13 @@ The colours of the website were chosen in order to keep the design simple, yet a
 
 ### Homepage
 The homepage is the first page that appears when the user enters the website. It contains a ‘free delivery’ banner at the very top of the page, with a main navbar below. Underneath the main navbar there is a hero image with hero text laid over it of different animals with a simple, white background so it isn’t too noisy. Below this, there are 3 images of animals with “Shop Now” buttons on each image, redirecting the user to the specific animal’s category based on the button they click. These images are side by side on larger viewports but stack on top of one another on smaller viewports. 
-Under this, there is a footer with basic information about the fictional company and social media links, as well as a link to the FAQ page. 
+Under this, there is a footer with basic information about the fictional company and social media links, as well as a link to the Blog page. 
 
 ### Navbar
-The main navbar has the name of the website centralised and at the top, with a search bar on the left and profile and cart links to the right. Underneath this, there are links to products, differing in all products, dog, products, cat products and small animal products. There is also a link for the blog here. The navbar collapses down on mobiles, shrinking into a hamburger menu with a search icon, profile icon and cart icon that are all clickable. 
+The main navbar has the name of the website centralised and at the top, with a search bar on the left and profile and cart links to the right. Underneath this, there are links to products, differing in all products, dog products, cat products and small animal products. There is also a link for the blog here. The navbar collapses down on mobiles, shrinking into a hamburger menu with a search icon, profile icon and cart icon that are all clickable. 
 
 ### Footer
-The footer is divided into 3 columns with each column containing different text for differing areas of the website. On the left, there is an “About Us” paragraph that gives a description of what the website is aiming to do. In the middle section, there are social media links for different websites and the right column has a link to the FAQ page. 
+The footer is divided into 3 columns with each column containing different text for differing areas of the website. On the left, there is an “About Us” paragraph that gives a description of what the website is aiming to do. In the middle section, there are social media links for different websites and the right column has a link to the Blog page. 
 
 ### Products Page
 There is a h1 at the top of the products page and below there are cards of the products in a number of columns, based on the viewport. On desktop, the cards show in rows of 4, tablet – in 3 and on mobile – 2 or 1 depending on the screen. The Products page initially shows all the products, but these can be either narrowed down to dog, cat or small animal products or can be sorted by certain criteria. 
@@ -124,14 +123,14 @@ The checkout page has a form on the left and an order summary on the right of th
 ### Log In Page
 The log in page is a simple form with fields for the user’s username/email address and password, in order for them to gain access to their personal accounts. 
 
-### Sign In Page
-The Sign in Page is similar to the login, with it being a simple form. Although, the user can register here by filling in the fields of email address, email confirmation, username, password and password confirmation. 
+### Sign Up Page
+The Sign Up Page is similar to the login, with it being a simple form. Although, the user can register here by filling in the fields of email address, email confirmation, username, password and password confirmation. 
 
 ### Order Confirmation
 The order confirmation page appears when an order has been successfully fulfilled. It contains h1 of ‘Order Confirmation’ and then a summary below of the items purchased. Below this there are buttons to continue shopping or to view previous orders. 
 
 ### User Profile Page
-The Personal profile page welcomes the user back, with previous orders and previous reviews being available to view. 
+The Personal profile page welcomes the user back, with previous orders and previous reviews being available to view. Their default delivery information also appears on this page. 
 
 ### Blog Page
 The Blog page gives a taster of what blogs are available for users to read, with the title and introduction of the blog being visible here. If the user wishes to read a full blog post, there is a ‘read more’ link that redirects the user to the full article. The Blog page also allows superusers to upload new blog posts via a form. 
@@ -145,19 +144,19 @@ The blog detail page is where users can read blog posts in full as well as leave
 
 
 ## Technologies Used 
-- [HTML](https://en.wikipedia.org/wiki/HTML) To enable the basic building on the website.
+- [HTML](https://en.wikipedia.org/wiki/HTML) To enable the basic building of the website.
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) for styling the website 
 - [JavaScript](https://www.javascript.com/) for the interactivity  
 - [Bootstrap](https://getbootstrap.com/) for structure, responsiveness and pre-made classes. 
 - [GitHub](https://github.com/) Where I can have my repository saved for my project. 
 - [Gitpod](https://www.gitpod.io/) My preferred IDE for building the website.
 - [GIT](https://git-scm.com/) for version control.
-- [Google Fonts](https://fonts.google.com/)   to choose and use different fonts for the website.
-- [Font Awesome](https://fontawesome.com/)   For different icon elements used.
+- [Google Fonts](https://fonts.google.com/) to choose and use different fonts for the website.
+- [Font Awesome](https://fontawesome.com/) For different icon elements used.
 - [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) To use alongside Bootstrap.
-- [Python](https://www.python.org/)For the backend functionality of the wesite
+- [Python](https://www.python.org/) For the backend functionality of the wesite
 - [Django]( https://www.djangoproject.com/) as the Framework and for back-end coding. 
-- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) – For the account functionality of the project. 
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) For the account functionality of the project. 
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) Used for all forms in the website
 - [Stripe](https://stripe.com/) For the payment section
 - [Heroku](https://signup.heroku.com/) For deployment of the website
@@ -166,11 +165,8 @@ The blog detail page is where users can read blog posts in full as well as leave
 - [DBDiagrams](dbdiagrams.io) to the build the database schema 
 - [Imgur](imgur.com) to host the image_urls for the product model
 
-
-
-
 ## Testing  
-Testing information can be found at [TESTING.md]( https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/TESTING.md).
+Testing information can be found at [TESTING.md](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/TESTING.md).
 
 ## Deployment  
 
@@ -211,9 +207,6 @@ To deploy the website to Heroku the following steps were taken.
     ```
 * The postgres database should now be ready for use.
 
-
-
-
 * To tell Heroku the app is a web app, the following steps were taken -   
 	* Install Gunicorn by using the command ‘pip3 install Gunicorn’      
     * Create a Procfile by using the command ‘touch Procfile’
@@ -229,14 +222,14 @@ To deploy the website to Heroku the following steps were taken.
 In Settings, add Heroku to the list of allowed hosts and localhost using the following - 
 `“ALLOWED_HOSTS = ["<heroku appname>.herokuapp.com", "localhost"]”`
 * Push the changes to GitHub
-* Then push the Heroku by using `heroku git:remote -a <heroku appname>`
+* Then push to Heroku by using `heroku git:remote -a <heroku appname>`
 * Push the app to GitHub using -`git push heroku master` and Heroku should now build the app.
 
     
 * Next, On the Heroku Website, go the deploy selection of the relevant app 
-* When selected and connect click ‘enable automatic deploys' and GitHub should now automatically push changes to Heroku too
+* When selected and connected, click ‘enable automatic deploys' and GitHub should now automatically push changes to Heroku too
     
-* Amazon AWS was used to store both static and media files of the website –
+Amazon AWS was used to store both static and media files of the website –
 * Create an AWS Account and/or sign in
     * To create a bucket search for the aws s3 service
     * Click on ‘create bucket’
@@ -272,7 +265,7 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
     * select action to get object
     * Paste in your ARN (found on the bucket policy page)
     * click “add statement” then the “generate policy button”
-* Copy and paste the new policy into your bucket policy, adding /* to the end of the resources key and click ‘save’. 
+    * Copy and paste the new policy into your bucket policy, adding /* to the end of the resources key and click ‘save’. 
                   
 * Go to the Access Control List section.
     * Set list objects permission to “everyone.”
@@ -280,7 +273,7 @@ In Settings, add Heroku to the list of allowed hosts and localhost using the fol
 	* Create a new group by clicking “new group” and give it a name
 	* Create a group policy by clicking “policy” and then “create policy”
 	* Search for s3 and select Amazon3fullaccess and then import. 
-	* Past in the ARN used in the resources section and click “review policy”
+	* Paste in the ARN used in the resources section and click “review policy”
 	* Fill the name and description and click “generate”
 	* Then, click “permissions” and attach the policy.
 	* To create a user, select users and click on “add user”
@@ -317,8 +310,8 @@ USE_AWS, an environmental variable needs to be set up to run code on Heroku. The
 ```
 * Back in Heroku click on settings tab and then click reveal config vars.
 * Then set up the environmental variables as required.
-* Back in the IDE, we need to create a custom storages.py to tell django that in production we want to use Amazon S3 to store our static and media files
-* import S3Boto3Storage at the top of the custom_storages.py file.
+* Back in the IDE, we need to create a custom storages.py to tell Django that in production we want to use Amazon S3 to store our static and media files
+* Import S3Boto3Storage at the top of the custom_storages.py file.
 * Set up classes to tell django where to store the files as shown below:
  ```
                 class StaticStorage(S3Boto3Storage):
@@ -327,7 +320,7 @@ USE_AWS, an environmental variable needs to be set up to run code on Heroku. The
                 class MediaStorage(S3Boto3Storage):
                     location = settings.MEDIAFILES_LOCATION
 ```
-* push all the changes to Github 
+* Push all the changes to Github 
 * Add Media files to AWS
     * in your AWS bucket, create a new folder called media
     * select “upload” and upload your image files, then select “grand public access”. 
@@ -365,11 +358,10 @@ USE_AWS, an environmental variable needs to be set up to run code on Heroku. The
 ### Images
 The images used for this website were obtained from [Shutterstock](www.shutterstock.com) and  [Unsplash](www.unsplash.com) except for the product images. These were obtained from [Amazon](amazon.co.uk)
 ### Content 
-The blog articles were taken from [Pets at Home Pet Talk articles]( https://www.petsathome.com/pet-talk) and the product titles, descriptions and prices were all slightly amended versions of products on [Amazon](amazon.co.uk).
+The blog articles were taken from [Pets at Home Pet Talk articles](https://www.petsathome.com/pet-talk) and the product titles, descriptions and prices were all slightly amended versions of products on [Amazon](amazon.co.uk).
 ### Code
 
 This website was made following the Code Institute Boutique Ado tutorial videos by Chris Zielinski. I used these videos as guidance to build my website and built on these tutorials. 
-
 
 ### Acknowledgements
 I would like to thank my mentor, [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), for his time, advice and comments in working with me to build my project. As this is my final project with Code Institute, I would like to further thank Precious for his guidance and mentorship throughout the whole course and for helping me get to a stage where I have submitted all four milestone projects. 

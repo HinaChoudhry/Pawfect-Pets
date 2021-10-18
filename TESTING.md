@@ -1,7 +1,7 @@
 # Testing
 
 ## Code Validation
-- [W3C Mark-up Validation](https://validator.w3.org/) was used for checking for validity of html. 
+- [W3C Mark-up Validation](https://validator.w3.org/) was used for checking for validity of html. There were [no errors](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/validation/html%20validation.jpg) or warnings in any of the HTML files.
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. There were [no errors](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/validation/CSS%20validation.jpg) in the CSS files. 
 - [JSHint](https://jshint.com/) was used to check for validity of the JavaScript. There were [no errors](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/validation/js%20validation.jpg) in the JavaScript files. 
 - For Python code, I used the in-built Gitpod linter to validate code. There are three warnings which I have not addressed for the following reasons. For lines that were too long in the migration files, these have been created by Django and the issue has been marked as a "won't fix" by the Django Team. For avoiding using null=True on string-based fields - this is to avoid having two values for a field if left blank, but as blank values are needed for forms, null affect the database storage. The unused imports are still required as they link up other parts of code that is needed for the code to work. 
@@ -23,6 +23,7 @@ As a user
 
 - I want to be able to see a further detailed summary of each product with descriptions, price and reviews
     * A product details page is part of the website. In this, there is a larger image of the selected product as well as name and description. The product details page also allows the user to purchase certain quantities of the product, and there is also a section of user reviews, with the ability to leave a review on the product’s page as well. 
+
 - I want to be able to register an account for myself
     * Users are able to register themselves for an account. 
  
@@ -67,15 +68,17 @@ As an admin
     * The admin can add a product to the website, with details and images being uploaded for the product. 
 
 - I want to be able to edit/update a product
-The admin can make amendments to individual products and save these changes to the product detail page. There is an edit button on both the product and products detail page to     * edit the product. 
+    * The admin can make amendments to individual products and save these changes to the product detail page. There is an edit button on both the product and products detail page to edit the product. 
 
 - I want to be able to delete products
     * The admin is able to delete products from both the products page and product details page. 
 
 - I want to be able to post blog posts
     * The admin is able to add a blog post to the website, including an image to go along with the post. 
+
 - I want to be able to edit blog posts
     * The admin is able to amend previously written blog posts and save these changes made to the post. 
+
 - I want to be able to delete blog posts
     * The admin is able to delete blog posts. 
 
@@ -202,8 +205,8 @@ The mobile view for the blog page is also the same as the desktop and tablet vie
 ### Blog detail
 
 #### Desktop
-The Blog detail page has the title, image and blog content on it’s page, stacked on top of one another so that the image can be large rather than being in a row and having to shrink the image. 
-The Comments sections below this and under that is the Add a Comment form. 
+The Blog detail page has the title, image and blog content on its page, stacked on top of one another so that the image can be large rather than being in a row and having to shrink the image. 
+The Comments sections below this, and under that, is the Add a Comment form. 
 
 #### Tablet 
 The layout for the tablet viewport is similar to the desktop, with the image being responsive and scaling down to the smaller screen. The rest of the page has also scaled down but is still on top of one another. 
@@ -225,7 +228,7 @@ The layout on the mobile viewport is  similar to that on the portrait position w
 ## Browser Compatibility 
 
 ### Google Chrome
-The website was built using Google Chrome and functionality has been tested on Chrome with the use of DevTools. The site is fully responsive and there are currently no bugs found. 
+The website was built using Google Chrome and functionality has been tested on Chrome with the use of DevTools. The site is fully responsive and there are currently no bugs found (except for the one mentioned below).
 
 ### Firefox
 The website was also responsive in Firefox with no bugs being found while browsing the website. 
@@ -244,7 +247,7 @@ The website was again responsive on Microsoft Edge with no bugs found.
     * Changed position to absolute and gave the navbar a z-index in order to fix this 
 
 - Links were not clickable
-    * Removed the “data toggle” attribute from the links to enable clicking/dropdown functioning
+    * Removed the “data toggle” attribute from the links to enable clicking/dropdown functionality. 
 
 - Stripe Country selector was not allowing users to correctly select which country they are in, instead only using a 2 letter term eg GB/UK. 
     * Changed the checkout model and form for the country field to a dropdown selection list instead of a charfield
@@ -264,9 +267,8 @@ The website was again responsive on Microsoft Edge with no bugs found.
 - Edit and delete buttons were made for users to be able to delete and edit only their own reviews but the if statement written was hiding them for all users
     * Resolved by adding “userprofile” to the end of 'review.user  = review.user'
 
-
 - When creating the blog template to post blogs, “blogpost” in the add_blog_post function in views.py was undefined
-    * Resolved by imported model into the views.py
+    * Resolved by importing model into the views.py
 
 - Blog posts were not rendering 
     * Removed “args=blogpost.id” in the add_blog_post function to resolve this. 
@@ -287,4 +289,4 @@ The website was again responsive on Microsoft Edge with no bugs found.
     * Resolved by moving the location of the 'endfor' tag within the code.
     
 ## Unresolved bugs
-- When trying to add a product via the Product Management tab, uploading a product without an image results in an error. However, if you navigate and search for the product just uploaded it displays with the 'no image' image and everything has uploaded correctly. 
+- When trying to add a product via the Product Management tab, uploading a product without an image results in an error. However, if you navigate and search for the product just uploaded, it shows the product has been successfully uploaded but with the 'no image' image. 
