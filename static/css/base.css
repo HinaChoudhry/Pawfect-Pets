@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
 
-html{
+html, body{
     height: 100%;
 }
 
