@@ -5,6 +5,7 @@
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used for checking errors in the CSS. There were [no errors](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/validation/CSS%20validation.jpg) in the CSS files. 
 - [JSHint](https://jshint.com/) was used to check for validity of the JavaScript. There were [no errors](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/validation/js%20validation.jpg) in the JavaScript files. 
 - For Python code, I used the in-built Gitpod linter to validate code. There are three warnings which I have not addressed for the following reasons. For lines that were too long in the migration files, these have been created by Django and the issue has been marked as a "won't fix" by the Django Team. For avoiding using null=True on string-based fields - this is to avoid having two values for a field if left blank, but as blank values are needed for forms, null affect the database storage. The unused imports are still required as they link up other parts of code that is needed for the code to work. 
+I was also advised to use the [Pep8 Online](pep8online.com) validator and I ran all my relevant files through it. There were [no errors](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/validation/Pep8%20validation.jpg) found in any of the files. 
 
 ## User Story Tests
 
@@ -135,6 +136,25 @@ The website was manually tested for functionality and to see if apps worked as t
 
 ## Responsiveness
 
+The responsiveness of the site was checked on the following viewports/devices - 
+- Desktop
+    * 1920 x 1080
+
+- Tablet 
+    * Ipad
+    * Ipad Pro
+
+- Mobile
+    * Moto G4
+    * Galaxy S5
+    * Pixel 2
+    * Pixel XL
+    * iPhone 5/SE
+    * iPhone 6/7/8 (and Plus)
+    * iPhone X
+    * Surface Duo
+    * Galaxy Fold
+    
 ### Home Page 
 #### Desktop 
 On desktop, the Home Page spans the whole width of the viewport. The navbar is full, with there being a search bar, navbar text, account button and cart button as well as links to different sections of the website. Underneath, there is a hero image and hero text that again span the width of the viewport on desktop and under this there are 3 smaller images. These 3 images are displayed side by side and each contain a “shop now” button in the center of the image. The footer is divided into 3 sections with “About Us”, Social media links and Extra Reading sections that are again displayed side by side in a row. 
@@ -227,13 +247,13 @@ The layout on the mobile viewport is  similar to that on the portrait position w
 
 ## Browser Compatibility 
 
-### Google Chrome
+### [Google Chrome](https://www.google.co.uk/chrome/?brand=CHBD&gclid=EAIaIQobChMIi5nY65OY6gIVKoBQBh15wQBrEAAYASAAEgKlOvD_BwE&gclsrc=aw.ds)
 The website was built using Google Chrome and functionality has been tested on Chrome with the use of DevTools. The site is fully responsive and there are currently no bugs found (except for the one mentioned below).
 
-### Firefox
+### [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 The website was also responsive in Firefox with no bugs being found while browsing the website. 
 
-### Microsoft  Edge
+### [Microsoft Edge](https://www.microsoft.com/en-us/edge)
 The website was again responsive on Microsoft Edge with no bugs found. 
 
 ## Bugs and solutions

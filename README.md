@@ -170,7 +170,25 @@ Testing information can be found at [TESTING.md](https://github.com/HinaChoudhry
 
 ## Deployment  
 
+### Environmental variables
+
+| Key | Value |
+|---|---|
+| SECRET_KEY | *YOUR SECRET_KEY* |
+| DATABASE_URL | *YOUR DATABASE_URL* |
+| EMAIL_HOST_USER | *YOUR EMAIL ADDRESS* |
+| EMAIL_HOST_PASS | *YOUR EMAIL PASS CODE* |
+| STRIPE_PUBLIC_KEY | *YOUR STRIPE_PUBLIC_KEY* |
+| STRIPE_SECRET_KEY | *YOUR STRIPE_SECRET_KEY* |
+| STRIPE_WH_SECRET | *YOUR STRIPE_WH_SECRET*|
+| AWS_SECRET_ACCESS_KEY | *YOUR AWS_SECRET_ACCESS_KEY* |
+| AWS_ACCESS_KEY_ID | *YOUR AWS_ACCESS_KEY_ID* |
+| USE_AWS | *True* |
+| | |
+
 ### Deployment to Heroku
+
+
 
 To deploy the website to Heroku the following steps were taken. 
 
