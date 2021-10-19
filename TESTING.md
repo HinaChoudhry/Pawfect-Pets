@@ -64,6 +64,9 @@ As a user
 - I want to be able to edit/delete my comment on the blog posts 
     * Registered users can amend and delete their comments on blog posts 
 
+- I want to have an FAQ for common questions
+    * There is an FAQ page for questions regarding deliveries and returns for customers to read 
+
 As an admin 
 - I want to be able to add a product to the website
     * The admin can add a product to the website, with details and images being uploaded for the product. 
@@ -133,6 +136,9 @@ The website was manually tested for functionality and to see if apps worked as t
 
 - I was able to see my delivery/payment information was correctly saved to my profile and also see a summary of my previous orders and review comments on my profile page. 
 
+### FAQ 
+
+- I was able to see all the questions and answers easily and all accordion dropdowns were matched correctly to questions with their answers. 
 
 ## Responsiveness
 
@@ -244,6 +250,20 @@ On tablet, in the landscape position the profile page is the same as the desktop
 
 #### Mobile
 The layout on the mobile viewport is  similar to that on the portrait position with the profile sections being again, stacked up rather than being displayed in a row. 
+
+### FAQ
+
+#### Desktop 
+
+The accordion for the FAQs are displayed across the viewport, with the col-lg-8 class being used to restrict the width of the accordions. The questions and answers are stacked on top each other but fit comfortably across the page. 
+
+#### Tablet 
+
+The accordion is now the width of the viewport, with the text being displayed in a similar fashion to the desktop viewport. 
+
+#### Mobile 
+
+The accordion is again the width of the viewport, with text being confined to each accordion panel but without looking squashed or too small for the viewport. 
 
 ## Browser Compatibility 
 

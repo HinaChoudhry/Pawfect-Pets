@@ -1,6 +1,6 @@
 # Milestone Project 4 – Pawfect Pets
 
-My fourth and final milestone project is for Pawfect Pets, a full stack e-commerce website for pet toys. It contains a homepage, products page, product detail page, shopping bag, checkout page, user profile page and a blog page. This is a full stack e-commerce website using HTML, CSS, JavaScript, Python and the Django Framework. The aim of the website is to sell products to potential customers and have them regularly use the site as a means of buying pet toys for their pets. 
+My fourth and final milestone project is for Pawfect Pets, a full stack e-commerce website for pet toys. It contains a homepage, products page, product detail page, shopping bag, checkout page, user profile page, blog page and an FAQ. This is a full stack e-commerce website using HTML, CSS, JavaScript, Python and the Django Framework. The aim of the website is to sell products to potential customers and have them regularly use the site as a means of buying pet toys for their pets. 
 Please note that the card payment details for Stripe should be entered as 4242 recurring as otherwise, it will show as invalid card details. 
 [Pawfect Pets](https://pawfect-pets.herokuapp.com/)
 
@@ -29,6 +29,7 @@ As a user
 - I want to be able to read a blog
 - I want to be able to comment on the blog
 - I want to be able to edit/delete my comments on the blog
+- I want to have an FAQ for common questions
 
 As an admin 
 - I want to be able to add a product to the website
@@ -40,7 +41,7 @@ As an admin
 
 ### Wireframes 
 
-The Balsamiq programme was used to create my wireframes for my project. Building the wireframes before starting to build my project allowed me to plan what I was aiming to make and also allowed me to discuss the layout of the website with my mentor in advance. 
+The Balsamiq programme was used to create my wireframes for my project. Building the wireframes before starting to build my project allowed me to plan what I was aiming to make and also allowed me to discuss the layout of the website with my mentor in advance. There are no wireframes for the FAQ page as this was added to the project as a much later stage. 
 
 Desktop Wireframes
 
@@ -51,7 +52,7 @@ Desktop Wireframes
 - [Log In](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/desktop/Log%20In%20Desktop.png)
 - [Product Item](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/desktop/Product%20Item%20Desktop.png)
 - [Products](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/desktop/Products%20desktop.png)
--  [Sign Up](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/desktop/Sign%20Up%20Desktop.png)
+- [Sign Up](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/desktop/Sign%20Up%20Desktop.png)
 - [Successful checkout](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/desktop/Successful%20Checkout%20Desktop.png)
 - [User Profile](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/desktop/User%20Profile%20Desktop.png)
 
@@ -138,6 +139,10 @@ The Blog page gives a taster of what blogs are available for users to read, with
 ### Blog Detail Page
 
 The blog detail page is where users can read blog posts in full as well as leave comments. The Blog Detail page includes a related image to the blog post, a title, author, date posted and text sections. Logged in users can also leave comments here on the blog post. 
+
+### FAQ Page
+
+The link to the FAQ is in the footer of the website. The FAQ page has questions and answers to common questions regarding delivery and returns. The questions and answers are laid out with the Bootstrap accordion feature. When initially on the page, all of the accordions are collapsed into just questions but when a user clicks on a question, the answer is revealed underneath the the question. 
 
 ## Database schema  
 ![db schema](https://github.com/HinaChoudhry/Pawfect-Pets/blob/main/readme_images/database/database%20schema.png)
