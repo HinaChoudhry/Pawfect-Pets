@@ -3,11 +3,9 @@
 
 let form = document.getElementById("reviewcomment");
 
-console.log("outside function");
 function validateCode(event) {
     event.preventDefault(); 
     var comment = document.getElementById("id_comment").value;
-    console.log(comment);
     comment = comment.replace(/[^0-9a-z]/gi, '');
     if (comment.length > 0) { 
         form.submit();
@@ -24,7 +22,6 @@ form.addEventListener("submit", validateCode);
 function validateCode(event) {
     event.preventDefault(); 
     var title = document.getElementById("id_title").value;
-    console.log(title);
     title = title.replace(/[^0-9a-z]/gi, '');
     if (title.length > 0) { 
         form.submit();
