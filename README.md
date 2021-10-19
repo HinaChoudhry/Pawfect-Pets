@@ -41,7 +41,7 @@ As an admin
 
 ### Wireframes 
 
-The Balsamiq programme was used to create my wireframes for my project. Building the wireframes before starting to build my project allowed me to plan what I was aiming to make and also allowed me to discuss the layout of the website with my mentor in advance. There are no wireframes for the FAQ page as this was added to the project as a much later stage. 
+The Balsamiq programme was used to create my wireframes for my project. Building the wireframes before starting to build my project allowed me to plan what I was aiming to make and also allowed me to discuss the layout of the website with my mentor in advance. There are no wireframes for the FAQ page as this was added to the project at a much later stage. 
 
 Desktop Wireframes
 
@@ -99,13 +99,13 @@ The colours of the website were chosen in order to keep the design simple, yet a
 
 ### Homepage
 The homepage is the first page that appears when the user enters the website. It contains a ‘free delivery’ banner at the very top of the page, with a main navbar below. Underneath the main navbar there is a hero image with hero text laid over it of different animals with a simple, white background so it isn’t too noisy. Below this, there are 3 images of animals with “Shop Now” buttons on each image, redirecting the user to the specific animal’s category based on the button they click. These images are side by side on larger viewports but stack on top of one another on smaller viewports. 
-Under this, there is a footer with basic information about the fictional company and social media links, as well as a link to the Blog page. 
+Under this, there is a footer with basic information about the fictional company and social media links, as well as a link to the FAQ page. 
 
 ### Navbar
 The main navbar has the name of the website centralised and at the top, with a search bar on the left and profile and cart links to the right. Underneath this, there are links to products, differing in all products, dog products, cat products and small animal products. There is also a link for the blog here. The navbar collapses down on mobiles, shrinking into a hamburger menu with a search icon, profile icon and cart icon that are all clickable. 
 
 ### Footer
-The footer is divided into 3 columns with each column containing different text for differing areas of the website. On the left, there is an “About Us” paragraph that gives a description of what the website is aiming to do. In the middle section, there are social media links for different websites and the right column has a link to the Blog page. 
+The footer is divided into 3 columns with each column containing different text for differing areas of the website. On the left, there is an “About Us” paragraph that gives a description of what the website is aiming to do. In the middle section, there are social media links for different websites and the right column has a link to the FAQ page. 
 
 ### Products Page
 There is a h1 at the top of the products page and below there are cards of the products in a number of columns, based on the viewport. On desktop, the cards show in rows of 4, tablet – in 3 and on mobile – 2 or 1 depending on the screen. The Products page initially shows all the products, but these can be either narrowed down to dog, cat or small animal products or can be sorted by certain criteria. 
