@@ -23,7 +23,7 @@ function validateCode(event) {
     event.preventDefault(); 
     var title = document.getElementById("id_title").value;
     title = title.replace(/[^0-9a-z]/gi, '');
-    if (title.length > 0) { 
+    if (title.length > 0) 
         form.submit();
       }
     else {
